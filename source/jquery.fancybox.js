@@ -16,7 +16,7 @@
 	var H = $("html"),
 		W = $(window),
 		D = $(document),
-		F = $	 = function () {
+		F = $.fancybox = function () {
 			F.open.apply( this, arguments );
 		},
 		IE =  navigator.userAgent.match(/msie/i),
@@ -998,7 +998,7 @@
 					$(this).find('iframe').hide().attr('src', '//about:blank').end().empty();
 				} catch (e) {}
 			});
-			
+
 			if (coming.iframe.preload) {
 				F.showLoading();
 
