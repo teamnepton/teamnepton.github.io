@@ -1,0 +1,417 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load8();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_8{left:872px;top:54px;}
+#t2_8{left:138px;top:95px;}
+#t3_8{left:220px;top:95px;}
+#t4_8{left:110px;top:112px;}
+#t5_8{left:165px;top:112px;}
+#t6_8{left:138px;top:130px;}
+#t7_8{left:220px;top:130px;}
+#t8_8{left:138px;top:147px;}
+#t9_8{left:220px;top:147px;}
+#ta_8{left:138px;top:165px;}
+#tb_8{left:220px;top:165px;}
+#tc_8{left:220px;top:183px;}
+#td_8{left:138px;top:200px;}
+#te_8{left:220px;top:200px;}
+#tf_8{left:138px;top:218px;}
+#tg_8{left:220px;top:218px;}
+#th_8{left:110px;top:235px;}
+#ti_8{left:165px;top:235px;}
+#tj_8{left:138px;top:253px;}
+#tk_8{left:220px;top:253px;}
+#tl_8{left:138px;top:270px;}
+#tm_8{left:220px;top:270px;}
+#tn_8{left:138px;top:288px;}
+#to_8{left:220px;top:288px;}
+#tp_8{left:440px;top:288px;}
+#tq_8{left:138px;top:306px;}
+#tr_8{left:220px;top:306px;}
+#ts_8{left:138px;top:323px;}
+#tt_8{left:220px;top:323px;}
+#tu_8{left:220px;top:341px;}
+#tv_8{left:138px;top:358px;}
+#tw_8{left:220px;top:358px;}
+#tx_8{left:138px;top:376px;}
+#ty_8{left:220px;top:376px;}
+#tz_8{left:83px;top:393px;}
+#t10_8{left:110px;top:393px;}
+#t11_8{left:110px;top:411px;}
+#t12_8{left:165px;top:411px;}
+#t13_8{left:138px;top:429px;}
+#t14_8{left:220px;top:429px;}
+#t15_8{left:138px;top:446px;}
+#t16_8{left:220px;top:446px;}
+#t17_8{left:138px;top:464px;}
+#t18_8{left:220px;top:464px;}
+#t19_8{left:138px;top:481px;}
+#t1a_8{left:220px;top:481px;}
+#t1b_8{left:138px;top:499px;}
+#t1c_8{left:220px;top:499px;}
+#t1d_8{left:138px;top:516px;}
+#t1e_8{left:220px;top:516px;}
+#t1f_8{left:110px;top:534px;}
+#t1g_8{left:165px;top:534px;}
+#t1h_8{left:138px;top:552px;}
+#t1i_8{left:220px;top:552px;}
+#t1j_8{left:138px;top:569px;}
+#t1k_8{left:220px;top:569px;}
+#t1l_8{left:138px;top:587px;}
+#t1m_8{left:220px;top:587px;}
+#t1n_8{left:138px;top:604px;}
+#t1o_8{left:220px;top:604px;}
+#t1p_8{left:138px;top:622px;}
+#t1q_8{left:220px;top:622px;}
+#t1r_8{left:138px;top:639px;}
+#t1s_8{left:220px;top:639px;}
+#t1t_8{left:138px;top:657px;}
+#t1u_8{left:220px;top:657px;}
+#t1v_8{left:55px;top:710px;}
+#t1w_8{left:67px;top:715px;}
+#t1x_8{left:142px;top:710px;}
+#t1y_8{left:156px;top:715px;}
+#t1z_8{left:55px;top:758px;}
+#t20_8{left:67px;top:761px;}
+#t21_8{left:149px;top:758px;}
+#t22_8{left:162px;top:761px;}
+#t23_8{left:55px;top:780px;}
+#t24_8{left:55px;top:798px;}
+#t25_8{left:55px;top:816px;}
+#t26_8{left:55px;top:833px;}
+#t27_8{left:55px;top:868px;}
+#t28_8{left:55px;top:886px;}
+#t29_8{left:83px;top:886px;}
+#t2a_8{left:83px;top:903px;}
+#t2b_8{left:110px;top:903px;}
+#t2c_8{left:110px;top:921px;}
+#t2d_8{left:165px;top:921px;}
+#t2e_8{left:83px;top:938px;}
+#t2f_8{left:110px;top:938px;}
+#t2g_8{left:110px;top:956px;}
+#t2h_8{left:165px;top:956px;}
+#t2i_8{left:110px;top:974px;}
+#t2j_8{left:165px;top:974px;}
+#t2k_8{left:110px;top:991px;}
+#t2l_8{left:165px;top:991px;}
+#t2m_8{left:138px;top:1009px;}
+#t2n_8{left:220px;top:1009px;}
+#t2o_8{left:138px;top:1026px;}
+#t2p_8{left:220px;top:1026px;}
+#t2q_8{left:165px;top:1044px;}
+#t2r_8{left:251px;top:1044px;}
+#t2s_8{left:110px;top:1062px;}
+#t2t_8{left:165px;top:1062px;}
+#t2u_8{left:138px;top:1079px;}
+#t2v_8{left:220px;top:1079px;}
+#t2w_8{left:138px;top:1097px;}
+#t2x_8{left:220px;top:1097px;}
+#t2y_8{left:110px;top:1114px;}
+#t2z_8{left:165px;top:1114px;}
+#t30_8{left:138px;top:1132px;}
+#t31_8{left:220px;top:1132px;}
+
+.s1_8{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-Calibri8;
+	color: rgb(0,0,0);
+}
+
+.s7_8{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+.s3_8{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: TimesNewRoman8;
+	color: rgb(0,0,0);
+}
+
+.s4_8{
+	FONT-SIZE: 85px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+.s5_8{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+.s6_8{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+.s2_8{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts8" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-Calibri8;
+	src :url("8/fonts/ABCDEE-Calibri.woff") format("woff");
+}
+
+@font-face {
+	font-family: TimesNewRoman8;
+	src :url("8/fonts/TimesNewRoman.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_8" class="t s1_8">5 </div>
+<div id="t2_8" class="t s2_8">2.1.2.13</div>
+<div id="t3_8" class="t s2_8">The Nepton system shall provide a visual indicating that the Nepton is finished charging to the customer. </div>
+<div id="t4_8" class="t s2_8">2.1.3</div>
+<div id="t5_8" class="t s2_8">Interface Requirements </div>
+<div id="t6_8" class="t s2_8">2.1.3.1</div>
+<div id="t7_8" class="t s2_8">The Nepton system shall provide an easily navigable user interface. </div>
+<div id="t8_8" class="t s2_8">2.1.3.2</div>
+<div id="t9_8" class="t s2_8">The Nepton system shall insulate heat sensitive components from heat generating components. </div>
+<div id="ta_8" class="t s2_8">2.1.3.3</div>
+<div id="tb_8" class="t s2_8">The Nepton system shall require that the container surface touching the beverage be removable for safer  </div>
+<div id="tc_8" class="t s2_8">cleaning. </div>
+<div id="td_8" class="t s2_8">2.1.3.4</div>
+<div id="te_8" class="t s2_8">The Nepton system shall accept user recalibrations to pre-set perfect temperatures. </div>
+<div id="tf_8" class="t s2_8">2.1.3.5</div>
+<div id="tg_8" class="t s2_8">The Nepton system shall accept user changes to temperature notifying patterns. </div>
+<div id="th_8" class="t s2_8">2.1.4</div>
+<div id="ti_8" class="t s2_8">Functional Requirements </div>
+<div id="tj_8" class="t s2_8">2.1.4.1</div>
+<div id="tk_8" class="t s2_8">The Nepton system shall reheat the beverage inside of it. </div>
+<div id="tl_8" class="t s2_8">2.1.4.2</div>
+<div id="tm_8" class="t s2_8">The Nepton system shall accept customer requests and provide feedback. </div>
+<div id="tn_8" class="t s2_8">2.1.4.3</div>
+<div id="to_8" class="t s2_8">The Nepton system shall determine </div>
+<div id="tp_8" class="t s3_8">Nepton’s response to inputs received.</div>
+<div id="tq_8" class="t s2_8">2.1.4.4</div>
+<div id="tr_8" class="t s2_8">The Nepton system shall make carrying the Nepton convenient. </div>
+<div id="ts_8" class="t s2_8">2.1.4.5</div>
+<div id="tt_8" class="t s2_8">The Nepton system shall notify the user of the current temperature of the beverage inside it in relation to </div>
+<div id="tu_8" class="t s2_8">the calibrated perfect temperature. </div>
+<div id="tv_8" class="t s2_8">2.1.4.6</div>
+<div id="tw_8" class="t s2_8">The Nepton system shall connect wirelessly to the users smartphone. </div>
+<div id="tx_8" class="t s2_8">2.1.4.7</div>
+<div id="ty_8" class="t s2_8">The Nepton system shall measure the current temperature of the beverage inside it. </div>
+<div id="tz_8" class="t s2_8">2.2</div>
+<div id="t10_8" class="t s2_8">Non-Functional Requirements </div>
+<div id="t11_8" class="t s2_8">2.2.1</div>
+<div id="t12_8" class="t s2_8">Physical Requirements </div>
+<div id="t13_8" class="t s2_8">2.2.1.1</div>
+<div id="t14_8" class="t s2_8">The Nepton system shall maintain a weight less than 2 pounds. </div>
+<div id="t15_8" class="t s2_8">2.2.1.2</div>
+<div id="t16_8" class="t s2_8">The Nepton system shall maintain a height of less than 15 inches but greater than 10 inches. </div>
+<div id="t17_8" class="t s2_8">2.2.1.3</div>
+<div id="t18_8" class="t s2_8">The Nepton system shall have a widest diameter of between 3 and 4 inches. </div>
+<div id="t19_8" class="t s2_8">2.2.1.4</div>
+<div id="t1a_8" class="t s2_8">The Nepton system shall utilize a push-button lid deploying system. </div>
+<div id="t1b_8" class="t s2_8">2.2.1.5</div>
+<div id="t1c_8" class="t s2_8">The Nepton system shall utilize a hinge for the lid. </div>
+<div id="t1d_8" class="t s2_8">2.2.1.6</div>
+<div id="t1e_8" class="t s2_8">The Nepton system shall provide a means to carry the container conveniently. </div>
+<div id="t1f_8" class="t s2_8">2.2.2</div>
+<div id="t1g_8" class="t s2_8">Technology Requirements </div>
+<div id="t1h_8" class="t s2_8">2.2.2.1</div>
+<div id="t1i_8" class="t s2_8">The Nepton system shall utilize thermocouple temperature sensing capabilities. </div>
+<div id="t1j_8" class="t s2_8">2.2.2.2</div>
+<div id="t1k_8" class="t s2_8">The Nepton system shall incorporate O-rings leak prevention technology. </div>
+<div id="t1l_8" class="t s2_8">2.2.2.3</div>
+<div id="t1m_8" class="t s2_8">The Nepton system shall incorporate Bluetooth technology. </div>
+<div id="t1n_8" class="t s2_8">2.2.2.4</div>
+<div id="t1o_8" class="t s2_8">The Nepton system shall incorporate a round-the-thermos e-ink display. </div>
+<div id="t1p_8" class="t s2_8">2.2.2.5</div>
+<div id="t1q_8" class="t s2_8">The Nepton system shall utilize heating coil heating capabilities. </div>
+<div id="t1r_8" class="t s2_8">2.2.2.6</div>
+<div id="t1s_8" class="t s2_8">The Nepton system shall utilize battery power when not plugged in. </div>
+<div id="t1t_8" class="t s2_8">2.2.2.7</div>
+<div id="t1u_8" class="t s3_8">The Nepton system utilize the user’s existing smartphone IOS.</div>
+<div id="t1v_8" class="t s4_8">P</div>
+<div id="t1w_8" class="t s5_8">ROOF OF </div>
+<div id="t1x_8" class="t s4_8">C</div>
+<div id="t1y_8" class="t s5_8">ONCEPT</div>
+<div id="t1z_8" class="t s6_8">C</div>
+<div id="t20_8" class="t s7_8">OMPANION </div>
+<div id="t21_8" class="t s6_8">A</div>
+<div id="t22_8" class="t s7_8">PPLICATION</div>
+<div id="t23_8" class="t s2_8">The Nepton application will be developed for iOS for all iPhones. The app will allowed the digitally connected consumer to control all </div>
+<div id="t24_8" class="t s2_8">the technical features of the thermos as well as display information such as battery life. The final app will be programmed in Swift, to </div>
+<div id="t25_8" class="t s2_8">take advantage of the new and improved graphics, speed and safety improvements, and the new interactive playground. The app will </div>
+<div id="t26_8" class="t s2_8">connect and pair to the Nepton via Bluetooth.  </div>
+<div id="t27_8" class="t s2_8">Structure and Features </div>
+<div id="t28_8" class="t s2_8">1.0</div>
+<div id="t29_8" class="t s2_8">Home (Page) </div>
+<div id="t2a_8" class="t s2_8">1.1</div>
+<div id="t2b_8" class="t s2_8">Power Button (Button) </div>
+<div id="t2c_8" class="t s2_8">1.1.1</div>
+<div id="t2d_8" class="t s2_8">Turn on Nepton </div>
+<div id="t2e_8" class="t s2_8">1.2</div>
+<div id="t2f_8" class="t s2_8">Side Options Menu (Side Panel) </div>
+<div id="t2g_8" class="t s2_8">1.2.1</div>
+<div id="t2h_8" class="t s2_8">Swipe or click side menu button to activate </div>
+<div id="t2i_8" class="t s2_8">1.2.2</div>
+<div id="t2j_8" class="t s2_8">Display current Nepton charge </div>
+<div id="t2k_8" class="t s2_8">1.2.3</div>
+<div id="t2l_8" class="t s2_8">Calibration </div>
+<div id="t2m_8" class="t s2_8">1.2.3.1</div>
+<div id="t2n_8" class="t s3_8">Calibrate “Perfect Temperature” for a new drink</div>
+<div id="t2o_8" class="t s2_8">1.2.3.2</div>
+<div id="t2p_8" class="t s2_8">Warn if temperature set is above recommended temperature to mitigate risk of esophageal cancer </div>
+<div id="t2q_8" class="t s2_8">1.2.3.2.1</div>
+<div id="t2r_8" class="t s2_8">Ignore warning if desired </div>
+<div id="t2s_8" class="t s2_8">1.2.4</div>
+<div id="t2t_8" class="t s2_8">Bluetooth Tethering </div>
+<div id="t2u_8" class="t s2_8">1.2.4.1</div>
+<div id="t2v_8" class="t s2_8">Toggle Bluetooth tethering </div>
+<div id="t2w_8" class="t s2_8">1.2.4.2</div>
+<div id="t2x_8" class="t s2_8">Initially pair app and Nepton </div>
+<div id="t2y_8" class="t s2_8">1.2.5</div>
+<div id="t2z_8" class="t s2_8">E-Ink Customization </div>
+<div id="t30_8" class="t s2_8">1.2.5.1</div>
+<div id="t31_8" class="t s2_8">Toggle e-ink notifications </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg8Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg8"><object width="935" height="1210" data="8/8.svg" type="image/svg+xml" id="pdf8" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld8" type="text/javascript">
+
+var isIE = false;
+var f8 = [['t3_8',2567],['t5_8',571],['t7_8',1652],['t9_8',2318],['tb_8',2562],['te_8',2017],['tg_8',1939],['ti_8',616],['tk_8',1388],['tm_8',1788],['to_8',864],['tp_8',918],['tr_8',1556],['tt_8',2555],['tu_8',838],['tw_8',1683],['ty_8',2027],['t10_8',741],['t12_8',562],['t14_8',1539],['t16_8',2248],['t18_8',1849],['t1a_8',1662],['t1c_8',1238],['t1e_8',1904],['t1g_8',646],['t1i_8',1939],['t1k_8',1797],['t1m_8',1457],['t1o_8',1760],['t1q_8',1579],['t1s_8',1657],['t1u_8',1532],['t1w_8',281],['t23_8',3298],['t24_8',3300],['t25_8',3298],['t26_8',1128],['t27_8',550],['t29_8',324],['t2b_8',560],['t2d_8',390],['t2f_8',791],['t2h_8',1057],['t2j_8',751],['t2n_8',1183],['t2p_8',2377],['t2r_8',618],['t2t_8',493],['t2v_8',661],['t2x_8',705],['t2z_8',510],['t31_8',634]];
+function load8(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f8);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 110;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_8");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

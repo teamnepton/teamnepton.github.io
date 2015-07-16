@@ -1,0 +1,339 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load12();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_12{left:872px;top:54px;}
+#t2_12{left:55px;top:95px;}
+#t3_12{left:68px;top:98px;}
+#t4_12{left:126px;top:95px;}
+#t5_12{left:138px;top:98px;}
+#t6_12{left:55px;top:135px;}
+#t7_12{left:55px;top:153px;}
+#t8_12{left:55px;top:170px;}
+#t9_12{left:55px;top:205px;}
+#ta_12{left:55px;top:240px;}
+#tb_12{left:83px;top:258px;}
+#tc_12{left:110px;top:258px;}
+#td_12{left:83px;top:276px;}
+#te_12{left:110px;top:276px;}
+#tf_12{left:83px;top:293px;}
+#tg_12{left:110px;top:293px;}
+#th_12{left:336px;top:656px;}
+#ti_12{left:55px;top:691px;}
+#tj_12{left:55px;top:708px;}
+#tk_12{left:101px;top:715px;}
+#tl_12{left:106px;top:708px;}
+#tm_12{left:55px;top:726px;}
+#tn_12{left:55px;top:744px;}
+#to_12{left:64px;top:751px;}
+#tp_12{left:73px;top:744px;}
+#tq_12{left:55px;top:761px;}
+#tr_12{left:64px;top:768px;}
+#ts_12{left:73px;top:761px;}
+#tt_12{left:55px;top:779px;}
+#tu_12{left:62px;top:786px;}
+#tv_12{left:71px;top:779px;}
+#tw_12{left:55px;top:796px;}
+#tx_12{left:55px;top:814px;}
+#ty_12{left:70px;top:814px;}
+#tz_12{left:55px;top:849px;}
+#t10_12{left:55px;top:866px;}
+#t11_12{left:55px;top:884px;}
+#t12_12{left:85px;top:884px;}
+#t13_12{left:98px;top:884px;}
+#t14_12{left:55px;top:902px;}
+#t15_12{left:101px;top:902px;}
+#t16_12{left:55px;top:919px;}
+#t17_12{left:55px;top:937px;}
+#t18_12{left:55px;top:954px;}
+#t19_12{left:150px;top:954px;}
+#t1a_12{left:55px;top:972px;}
+#t1b_12{left:68px;top:972px;}
+#t1c_12{left:55px;top:1007px;}
+#t1d_12{left:55px;top:1025px;}
+#t1e_12{left:55px;top:1042px;}
+#t1f_12{left:55px;top:1060px;}
+#t1g_12{left:55px;top:1095px;}
+#t1h_12{left:101px;top:1095px;}
+#t1i_12{left:55px;top:1112px;}
+#t1j_12{left:55px;top:1130px;}
+#t1k_12{left:103px;top:1130px;}
+
+.s10_12{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(36,36,36);
+}
+
+.s1_12{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-Calibri12;
+	color: rgb(0,0,0);
+}
+
+.s11_12{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(36,36,36);
+	FONT-STYLE: italic;
+}
+
+.s8_12{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(255,255,255);
+}
+
+.s6_12{
+	FONT-SIZE: 39px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+.s7_12{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: TimesNewRoman12;
+	color: rgb(0,0,0);
+}
+
+.s5_12{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+	FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+}
+
+.s3_12{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+.s4_12{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+.s9_12{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+	FONT-STYLE: italic;
+}
+
+.s2_12{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts12" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-Calibri12;
+	src :url("12/fonts/ABCDEE-Calibri.woff") format("woff");
+}
+
+@font-face {
+	font-family: TimesNewRoman12;
+	src :url("12/fonts/TimesNewRoman.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_12" class="t s1_12">9 </div>
+<div id="t2_12" class="t s2_12">H</div>
+<div id="t3_12" class="t s3_12">EATING </div>
+<div id="t4_12" class="t s2_12">C</div>
+<div id="t5_12" class="t s3_12">OIL</div>
+<div id="t6_12" class="t s4_12">Objective: </div>
+<div id="t7_12" class="t s4_12">Increase temperature from 25°C to 54.44°C. 25°C is taken as room temperature. and 54.44°C is taken as 130°F, the optimal "safe </div>
+<div id="t8_12" class="t s4_12">temperature" at which to drink tea. Determine the amount of energy required. </div>
+<div id="t9_12" class="t s4_12">Q = heat energy = ? </div>
+<div id="ta_12" class="t s4_12">Assumptions: </div>
+<div id="tb_12" class="t s4_12">1.</div>
+<div id="tc_12" class="t s4_12">The liquid is water (coffee, tea, and other beverages are largely water-based) </div>
+<div id="td_12" class="t s4_12">2.</div>
+<div id="te_12" class="t s4_12">The container is perfectly insulated (no heat loss from conduction, convection, or radiation) </div>
+<div id="tf_12" class="t s4_12">3.</div>
+<div id="tg_12" class="t s4_12">The container is a closed system (no mass enters in or out of the system) </div>
+<div id="th_12" class="t s5_12">Figure 12: Heating Coil Proof of Concept </div>
+<div id="ti_12" class="t s4_12">Energy Required: </div>
+<div id="tj_12" class="t s4_12">Q = mc</div>
+<div id="tk_12" class="t s6_12">v</div>
+<div id="tl_12" class="t s7_12">ΔT</div>
+<div id="tm_12" class="t s4_12">m = 16oz = 453.56g (mass of water) </div>
+<div id="tn_12" class="t s4_12">T</div>
+<div id="to_12" class="t s6_12">1</div>
+<div id="tp_12" class="t s4_12">= 25°C (room temperature) </div>
+<div id="tq_12" class="t s4_12">T</div>
+<div id="tr_12" class="t s6_12">2</div>
+<div id="ts_12" class="t s4_12">= 54.44°C (target temperature) </div>
+<div id="tt_12" class="t s4_12">c</div>
+<div id="tu_12" class="t s6_12">v</div>
+<div id="tv_12" class="t s4_12">= 4.186 kJ/kg°C (specific heat of water, constant volume) </div>
+<div id="tw_12" class="t s4_12">Q = 0.45356 × 4.186 × (54.44 - 25) </div>
+<div id="tx_12" class="t s8_12">Q </div>
+<div id="ty_12" class="t s4_12">= 55.89 kJ </div>
+<div id="tz_12" class="t s4_12">Energy Delivered: </div>
+<div id="t10_12" class="t s4_12">Battery Capacity = 6,000 mAh (can provide 10 amperes of current for 1 hour) </div>
+<div id="t11_12" class="t s4_12">P = I</div>
+<div id="t12_12" class="t s9_12">V</div>
+<div id="t13_12" class="t s4_12">(Watts) </div>
+<div id="t14_12" class="t s4_12">V = 8.4</div>
+<div id="t15_12" class="t s9_12">V</div>
+<div id="t16_12" class="t s4_12">I = 6A </div>
+<div id="t17_12" class="t s4_12">P = 6 × 8.4 = 84 W = 50.4 J/sec </div>
+<div id="t18_12" class="t s7_12">E = PΔt = 50.4 </div>
+<div id="t19_12" class="t s10_12">× 3600 = 181440 J</div>
+<div id="t1a_12" class="t s8_12">E</div>
+<div id="t1b_12" class="t s10_12">= 181.440 kJ</div>
+<div id="t1c_12" class="t s10_12">Rate of Heat Transfer:</div>
+<div id="t1d_12" class="t s10_12">The selected battery of choice is a custom lithium manganese oxide (LMO). The battery is rechargeable and has a significantly higher </div>
+<div id="t1e_12" class="t s10_12">energy density than standard lithium-ion batteries, meaning that it can provide current at a significantly higher rate. Nepton will utilize </div>
+<div id="t1f_12" class="t s10_12">a 6,000 mAh LMO with a maximum current discharge of 6A.</div>
+<div id="t1g_12" class="t s10_12">V = 8.4</div>
+<div id="t1h_12" class="t s11_12">V</div>
+<div id="t1i_12" class="t s10_12">I = 6A</div>
+<div id="t1j_12" class="t s10_12">P = 8.4 </div>
+<div id="t1k_12" class="t s4_12">× 6 = 50.4W = 50.4 J/sec </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg12Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg12"><object width="935" height="1210" data="12/12.svg" type="image/svg+xml" id="pdf12" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld12" type="text/javascript">
+
+var isIE = false;
+var f12 = [['t7_12',3163],['t8_12',1893],['t9_12',484],['tc_12',1875],['te_12',2240],['tg_12',1772],['th_12',1055],['ti_12',433],['tj_12',183],['tm_12',890],['tp_12',668],['ts_12',754],['tv_12',1413],['tw_12',865],['ty_12',256],['tz_12',450],['t10_12',1905],['t11_12',119],['t14_12',185],['t16_12',160],['t17_12',776],['t18_12',364],['t19_12',459],['t1b_12',318],['t1c_12',548],['t1d_12',3273],['t1e_12',3289],['t1f_12',1506],['t1g_12',185],['t1i_12',160],['t1j_12',175],['t1k_12',615]];
+function load12(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f12);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 57;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_12");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

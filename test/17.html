@@ -1,0 +1,301 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load17();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_17{left:863px;top:54px;}
+#t2_17{left:55px;top:95px;}
+#t3_17{left:699px;top:95px;}
+#t4_17{left:55px;top:112px;}
+#t5_17{left:55px;top:147px;}
+#t6_17{left:55px;top:165px;}
+#t7_17{left:55px;top:183px;}
+#t8_17{left:795px;top:183px;}
+#t9_17{left:55px;top:200px;}
+#ta_17{left:55px;top:251px;}
+#tb_17{left:67px;top:255px;}
+#tc_17{left:55px;top:274px;}
+#td_17{left:55px;top:293px;}
+#te_17{left:55px;top:332px;}
+#tf_17{left:55px;top:351px;}
+#tg_17{left:55px;top:370px;}
+#th_17{left:55px;top:410px;}
+#ti_17{left:55px;top:428px;}
+#tj_17{left:55px;top:445px;}
+#tk_17{left:55px;top:463px;}
+#tl_17{left:55px;top:480px;}
+#tm_17{left:55px;top:498px;}
+#tn_17{left:55px;top:533px;}
+#to_17{left:839px;top:533px;}
+#tp_17{left:55px;top:551px;}
+#tq_17{left:55px;top:568px;}
+#tr_17{left:55px;top:619px;}
+#ts_17{left:72px;top:623px;}
+#tt_17{left:102px;top:619px;}
+#tu_17{left:115px;top:623px;}
+#tv_17{left:55px;top:659px;}
+#tw_17{left:55px;top:677px;}
+#tx_17{left:55px;top:712px;}
+#ty_17{left:55px;top:729px;}
+#tz_17{left:55px;top:747px;}
+#t10_17{left:55px;top:765px;}
+#t11_17{left:55px;top:782px;}
+#t12_17{left:483px;top:782px;}
+#t13_17{left:55px;top:800px;}
+#t14_17{left:55px;top:817px;}
+#t15_17{left:55px;top:835px;}
+#t16_17{left:55px;top:853px;}
+#t17_17{left:416px;top:853px;}
+#t18_17{left:55px;top:904px;}
+#t19_17{left:68px;top:908px;}
+#t1a_17{left:126px;top:904px;}
+#t1b_17{left:138px;top:908px;}
+#t1c_17{left:55px;top:945px;}
+#t1d_17{left:55px;top:962px;}
+#t1e_17{left:55px;top:997px;}
+#t1f_17{left:55px;top:1015px;}
+#t1g_17{left:55px;top:1032px;}
+#t1h_17{left:55px;top:1050px;}
+#t1i_17{left:55px;top:1068px;}
+#t1j_17{left:55px;top:1085px;}
+#t1k_17{left:55px;top:1103px;}
+#t1l_17{left:55px;top:1120px;}
+
+.s1_17{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-Calibri17;
+	color: rgb(0,0,0);
+}
+
+.s3_17{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+.s5_17{
+	FONT-SIZE: 57px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+.s4_17{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: 'Times New Roman', Times, serif;
+	color: rgb(0,0,0);
+}
+
+.s2_17{
+	FONT-SIZE: 61px;
+	FONT-FAMILY: TimesNewRoman17;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts17" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-Calibri17;
+	src :url("17/fonts/ABCDEE-Calibri.woff") format("woff");
+}
+
+@font-face {
+	font-family: TimesNewRoman17;
+	src :url("17/fonts/TimesNewRoman.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_17" class="t s1_17">14 </div>
+<div id="t2_17" class="t s2_17">“smart” product. Features such as temperature calibration, drink settings, and body aesthetic modifications </div>
+<div id="t3_17" class="t s3_17">would not be possible without </div>
+<div id="t4_17" class="t s3_17">the inclusion of an app to handle the raw data processing required. </div>
+<div id="t5_17" class="t s3_17">While the Nepton itself is significantly more complex than its competitors from a features and functionality standpoint, the Nepton team </div>
+<div id="t6_17" class="t s3_17">ensures that this complexity is not translated back to the consumer. Almost every function of the cup is adjustable to the individual needs </div>
+<div id="t7_17" class="t s2_17">and preferences of the user. Users will not need to hunt down settings in the app’s back end, but will be initially greeted w</div>
+<div id="t8_17" class="t s3_17">ith a welcome </div>
+<div id="t9_17" class="t s3_17">screen that quickly points out where and how to adjust different functions within the app. </div>
+<div id="ta_17" class="t s4_17">B</div>
+<div id="tb_17" class="t s5_17">ODY</div>
+<div id="tc_17" class="t s3_17">Consumer Need: </div>
+<div id="td_17" class="t s3_17">A durable, convenient, and vacuum-insulated container to store liquids in.</div>
+<div id="te_17" class="t s3_17">Summary:</div>
+<div id="tf_17" class="t s3_17">While thermoses already exist to cater to all our optimal temperature beverage needs, the Nepton takes this technology and brings it to </div>
+<div id="tg_17" class="t s3_17">the cutting edge. </div>
+<div id="th_17" class="t s3_17">Underneath the innovative e-ink exterior lies the foundational core of the Nepton. The body is crafted from a tough and lightweight </div>
+<div id="ti_17" class="t s3_17">stainless-steel which means the product will stand up to drops and dings, and is easy to travel with. The material also allows the exterior </div>
+<div id="tj_17" class="t s3_17">surface to maintain a comfortable temperature, so it can always be held no matter how hot the liquid inside may be. Furthermore, </div>
+<div id="tk_17" class="t s3_17">stainless-steel will not affect the taste of your beverage, making sure your drinks always taste as they should. And since the container is </div>
+<div id="tl_17" class="t s3_17">vacuum sealed, beverages can maintain their temperature (hot OR cold) for up to 24 hours, without even having to utilize our </div>
+<div id="tm_17" class="t s3_17">revolutionary heating element. </div>
+<div id="tn_17" class="t s2_17">The container also holds up to 16oz. so you’ll always be sure to have the right amount of beverage with you. The lid also fea</div>
+<div id="to_17" class="t s3_17">tures a </div>
+<div id="tp_17" class="t s3_17">simple slide-to-open option that is 100% leak-proof. Not to mention our convenient detachable wrist strap for those who want to carry </div>
+<div id="tq_17" class="t s3_17">their Neptons and still have their hands free. </div>
+<div id="tr_17" class="t s4_17">E-</div>
+<div id="ts_17" class="t s5_17">INK </div>
+<div id="tt_17" class="t s4_17">N</div>
+<div id="tu_17" class="t s5_17">OTIFIER</div>
+<div id="tv_17" class="t s3_17">Consumer Need: </div>
+<div id="tw_17" class="t s3_17">Inform about the temperature of the beverage it contains in an understandable and applicable medium. </div>
+<div id="tx_17" class="t s3_17">Summary: </div>
+<div id="ty_17" class="t s3_17">One problem that hot beverage drinkers everywhere will agree with is that when their hot beverage is poured into a thermos or other </div>
+<div id="tz_17" class="t s3_17">covered drinking container, it is almost impossible to tell if the liquid inside has cooled enough to safely drink. Often, after misjudging </div>
+<div id="t10_17" class="t s3_17">the time that has passed, one will drink from the thermos and severely burn their lips, tongue and throats. The only solution is to wait </div>
+<div id="t11_17" class="t s3_17">for the drink to cool an enjoyable temperature and drink the beverage </div>
+<div id="t12_17" class="t s2_17">then. However, the average person doesn’t live a slow, sedentary </div>
+<div id="t13_17" class="t s3_17">lifestyle that affords them the time to be constantly checking whether they can drink their beverages or not. Often they will just leave </div>
+<div id="t14_17" class="t s3_17">their beverage to cool, and forget about it, missing the opportunity to experience and partake in the enjoyment that comes with consuming </div>
+<div id="t15_17" class="t s3_17">a warm beverage at the intended comfortable temperature that they so very deserve. </div>
+<div id="t16_17" class="t s2_17">The Nepton addresses these issues in earnest through it’s E</div>
+<div id="t17_17" class="t s3_17">-ink temperature notification system.</div>
+<div id="t18_17" class="t s4_17">H</div>
+<div id="t19_17" class="t s5_17">EATING </div>
+<div id="t1a_17" class="t s4_17">R</div>
+<div id="t1b_17" class="t s5_17">OD</div>
+<div id="t1c_17" class="t s3_17">Consumer Need:  </div>
+<div id="t1d_17" class="t s3_17">Maintain drink temperature or heat up drink without home equipment. </div>
+<div id="t1e_17" class="t s3_17">Summary: </div>
+<div id="t1f_17" class="t s3_17">Although thermoses are efficient at retaining heat, as more of the liquid contained inside is drunk, the liquid is bound to lose the precious </div>
+<div id="t1g_17" class="t s3_17">heat one hopes to preserve. A warm or hot drink is meant to be drank as the name specifies, hot or warm. These drinks, while delicious </div>
+<div id="t1h_17" class="t s3_17">and invoke that warm fuzzy feeling while at their intended temperature, can lose their charm when the temperature drops. Hot cocoa on </div>
+<div id="t1i_17" class="t s3_17">a frosty Christmas morning provides children and adults with a comforting warmth when hot but quickly loses appeal when the drink </div>
+<div id="t1j_17" class="t s3_17">turns cold. Certain drinks are simply meant to be consumed hot and warm.  </div>
+<div id="t1k_17" class="t s3_17">For those with active lifestyles and also enjoy a warm refreshment on the go, a thermos unfortunately does not typically satisfy their </div>
+<div id="t1l_17" class="t s3_17">thirst when they are away from home. When your delicious drink is depleted, you are mostly out of luck for a hot refill unless there is a </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg17Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg17"><object width="935" height="1210" data="17/17.svg" type="image/svg+xml" id="pdf17" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld17" type="text/javascript">
+
+var isIE = false;
+var f17 = [['t2_17',2564],['t3_17',723],['t4_17',1622],['t5_17',3300],['t6_17',3299],['t7_17',2960],['t8_17',339],['t9_17',2181],['tc_17',412],['td_17',1808],['tf_17',3300],['tg_17',405],['th_17',3299],['ti_17',3300],['tj_17',3299],['tk_17',3300],['tl_17',3299],['tm_17',748],['tn_17',3132],['to_17',164],['tp_17',3298],['tq_17',1082],['tv_17',412],['tw_17',2499],['ty_17',3300],['tz_17',3299],['t10_17',3300],['t11_17',1695],['t12_17',1588],['t13_17',3300],['t14_17',3299],['t15_17',2048],['t16_17',1444],['t17_17',902],['t1c_17',427],['t1d_17',1717],['t1f_17',3300],['t1g_17',3300],['t1h_17',3300],['t1i_17',3300],['t1j_17',1838],['t1k_17',3298],['t1l_17',3300]];
+function load17(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f17);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 58;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_17");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

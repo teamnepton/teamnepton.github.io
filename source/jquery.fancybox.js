@@ -998,14 +998,6 @@
 					$(this).find('iframe').hide().attr('src', '//about:blank').end().empty();
 				} catch (e) {}
 			});
-
-			$(".fancybox").fancybox({
-				openEffect  : 'none',
-				closeEffect : 'none',
-				iframe : {
-					preload: false
-				}
-			});
 			
 			if (coming.iframe.preload) {
 				F.showLoading();
