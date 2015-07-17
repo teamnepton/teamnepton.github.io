@@ -1,0 +1,270 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load9();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_9{left:816px;top:1132px;}
+#t2_9{left:165px;top:111px;}
+#t3_9{left:165px;top:137px;}
+#t4_9{left:165px;top:164px;}
+#t5_9{left:165px;top:190px;}
+#t6_9{left:165px;top:216px;}
+#t7_9{left:110px;top:259px;}
+#t8_9{left:138px;top:312px;}
+#t9_9{left:165px;top:312px;}
+#ta_9{left:220px;top:369px;}
+#tb_9{left:165px;top:395px;}
+#tc_9{left:165px;top:422px;}
+#td_9{left:165px;top:448px;}
+#te_9{left:165px;top:474px;}
+#tf_9{left:165px;top:500px;}
+#tg_9{left:193px;top:553px;}
+#th_9{left:220px;top:553px;}
+#ti_9{left:193px;top:579px;}
+#tj_9{left:220px;top:579px;}
+#tk_9{left:220px;top:606px;}
+#tl_9{left:193px;top:632px;}
+#tm_9{left:220px;top:632px;}
+#tn_9{left:165px;top:685px;}
+#to_9{left:165px;top:711px;}
+#tp_9{left:193px;top:764px;}
+#tq_9{left:220px;top:764px;}
+#tr_9{left:220px;top:790px;}
+#ts_9{left:248px;top:816px;}
+#tt_9{left:275px;top:816px;}
+#tu_9{left:275px;top:843px;}
+#tv_9{left:248px;top:869px;}
+#tw_9{left:275px;top:869px;}
+#tx_9{left:275px;top:895px;}
+#ty_9{left:275px;top:922px;}
+#tz_9{left:193px;top:948px;}
+#t10_9{left:220px;top:948px;}
+#t11_9{left:248px;top:974px;}
+#t12_9{left:275px;top:974px;}
+#t13_9{left:275px;top:1001px;}
+
+.s1_9{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_9{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans9;
+	color: rgb(0,0,0);
+}
+
+.s4_9{
+	FONT-SIZE: 79px;
+	FONT-FAMILY: ABCDEE-OpenSans-Bold9;
+	color: rgb(0,0,0);
+}
+
+.s5_9{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans-Italic9;
+	color: rgb(0,0,0);
+}
+
+.s3_9{
+	FONT-SIZE: 97px;
+	FONT-FAMILY: ABCDEE-OpenSans9;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts9" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans-Bold9;
+	src :url("9/fonts/ABCDEE-OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans-Italic9;
+	src :url("9/fonts/ABCDEE-OpenSans-Italic.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans9;
+	src :url("9/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_9" class="t s1_9">6 </div>
+<div id="t2_9" class="t s2_9">users while the latter will facilitate customers physical interaction with the product </div>
+<div id="t3_9" class="t s2_9">to inspect and demo. Beginning with consignment stores is to offset the fact that we </div>
+<div id="t4_9" class="t s2_9">are a startup. It is a mutual relationship that allows us to place our product into a </div>
+<div id="t5_9" class="t s2_9">physical store while also allowing the vendor to assume less risk as they do not have </div>
+<div id="t6_9" class="t s2_9">to pay for the product until it sells.  </div>
+<div id="t7_9" class="t s3_9">Project Background </div>
+<div id="t8_9" class="t s4_9">A.</div>
+<div id="t9_9" class="t s4_9">Consumer Insight </div>
+<div id="ta_9" class="t s2_9">Nepton’s survey was presented to a sample of over 100 individuals under the </div>
+<div id="tb_9" class="t s2_9">general title of “Hot Beverage Product Survey.” The purpose of this survey was to </div>
+<div id="tc_9" class="t s2_9">identify a market opportunity for Nepton. The survey asked participants </div>
+<div id="td_9" class="t s2_9">approximately 10 questions pertaining to their experiences drinking hot beverages </div>
+<div id="te_9" class="t s2_9">or with hot beverage containers. The following are examples of several questions </div>
+<div id="tf_9" class="t s2_9">that were asked in the survey: </div>
+<div id="tg_9" class="t s5_9">a.</div>
+<div id="th_9" class="t s5_9">From where do you typically get your hot beverages? </div>
+<div id="ti_9" class="t s5_9">b.</div>
+<div id="tj_9" class="t s5_9">Which of the following complaints, if any, apply to your experiences with hot </div>
+<div id="tk_9" class="t s5_9">beverages? </div>
+<div id="tl_9" class="t s5_9">c.</div>
+<div id="tm_9" class="t s5_9">What are some reasons you do not use a thermos? </div>
+<div id="tn_9" class="t s2_9">Based from the results of the survey, the team has identified two potential markets </div>
+<div id="to_9" class="t s2_9">for Nepton. </div>
+<div id="tp_9" class="t s2_9">a.</div>
+<div id="tq_9" class="t s2_9">Individuals who own a thermos but feel that their hot beverage experience </div>
+<div id="tr_9" class="t s2_9">could be improved. </div>
+<div id="ts_9" class="t s2_9">i.</div>
+<div id="tt_9" class="t s2_9">34 individuals responded that they regularly used thermoses or </div>
+<div id="tu_9" class="t s2_9">similar non-disposable heat retention containers </div>
+<div id="tv_9" class="t s2_9">ii.</div>
+<div id="tw_9" class="t s2_9">Of those 34, 16 responded that one complaint they had with their </div>
+<div id="tx_9" class="t s2_9">thermoses was that they were unable to tell when the beverage inside </div>
+<div id="ty_9" class="t s2_9">was at a satisfactory temperature for consumption. </div>
+<div id="tz_9" class="t s2_9">b.</div>
+<div id="t10_9" class="t s2_9">Individuals who do not own or use a thermos. </div>
+<div id="t11_9" class="t s2_9">i.</div>
+<div id="t12_9" class="t s2_9">66 individuals responded that they did not regularly use thermoses or </div>
+<div id="t13_9" class="t s2_9">similar non-disposable heat retention containers. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg9Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg9"><object width="935" height="1210" data="9/9.svg" type="image/svg+xml" id="pdf9" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld9" type="text/javascript">
+
+var isIE = false;
+var f9 = [['t2_9',2571],['t3_9',2629],['t4_9',2531],['t5_9',2632],['t6_9',1092],['t7_9',891],['t9_9',699],['ta_9',2411],['tb_9',2519],['tc_9',2245],['td_9',2587],['te_9',2534],['tf_9',937],['th_9',1547],['tj_9',2244],['tm_9',1496],['tn_9',2597],['to_9',361],['tq_9',2336],['tr_9',605],['tt_9',1987],['tu_9',1523],['tw_9',2048],['tx_9',2194],['ty_9',1605],['t10_9',1433],['t12_9',2185],['t13_9',1541]];
+function load9(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f9);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 40;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_9");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

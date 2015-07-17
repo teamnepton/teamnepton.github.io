@@ -1,0 +1,465 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load4();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_4{left:816px;top:1132px;}
+#t2_4{left:110px;top:108px;}
+#t3_4{left:110px;top:151px;}
+#t4_4{left:299px;top:151px;}
+#t5_4{left:816px;top:151px;}
+#t6_4{left:110px;top:183px;}
+#t7_4{left:253px;top:183px;}
+#t8_4{left:816px;top:183px;}
+#t9_4{left:110px;top:215px;}
+#ta_4{left:253px;top:215px;}
+#tb_4{left:816px;top:215px;}
+#tc_4{left:127px;top:246px;}
+#td_4{left:160px;top:246px;}
+#te_4{left:287px;top:246px;}
+#tf_4{left:816px;top:246px;}
+#tg_4{left:127px;top:278px;}
+#th_4{left:160px;top:278px;}
+#ti_4{left:671px;top:278px;}
+#tj_4{left:816px;top:278px;}
+#tk_4{left:127px;top:309px;}
+#tl_4{left:160px;top:309px;}
+#tm_4{left:304px;top:309px;}
+#tn_4{left:807px;top:309px;}
+#to_4{left:127px;top:341px;}
+#tp_4{left:160px;top:341px;}
+#tq_4{left:367px;top:341px;}
+#tr_4{left:807px;top:341px;}
+#ts_4{left:110px;top:372px;}
+#tt_4{left:194px;top:372px;}
+#tu_4{left:807px;top:372px;}
+#tv_4{left:127px;top:404px;}
+#tw_4{left:160px;top:404px;}
+#tx_4{left:283px;top:404px;}
+#ty_4{left:807px;top:404px;}
+#tz_4{left:127px;top:435px;}
+#t10_4{left:160px;top:435px;}
+#t11_4{left:346px;top:435px;}
+#t12_4{left:807px;top:435px;}
+#t13_4{left:144px;top:467px;}
+#t14_4{left:316px;top:467px;}
+#t15_4{left:807px;top:467px;}
+#t16_4{left:144px;top:499px;}
+#t17_4{left:236px;top:499px;}
+#t18_4{left:807px;top:499px;}
+#t19_4{left:144px;top:530px;}
+#t1a_4{left:325px;top:530px;}
+#t1b_4{left:807px;top:530px;}
+#t1c_4{left:144px;top:562px;}
+#t1d_4{left:295px;top:562px;}
+#t1e_4{left:807px;top:562px;}
+#t1f_4{left:144px;top:593px;}
+#t1g_4{left:240px;top:593px;}
+#t1h_4{left:807px;top:593px;}
+#t1i_4{left:144px;top:625px;}
+#t1j_4{left:245px;top:625px;}
+#t1k_4{left:807px;top:625px;}
+#t1l_4{left:127px;top:656px;}
+#t1m_4{left:160px;top:656px;}
+#t1n_4{left:498px;top:656px;}
+#t1o_4{left:807px;top:656px;}
+#t1p_4{left:144px;top:688px;}
+#t1q_4{left:177px;top:688px;}
+#t1r_4{left:304px;top:688px;}
+#t1s_4{left:807px;top:688px;}
+#t1t_4{left:144px;top:720px;}
+#t1u_4{left:177px;top:720px;}
+#t1v_4{left:219px;top:720px;}
+#t1w_4{left:807px;top:720px;}
+#t1x_4{left:144px;top:751px;}
+#t1y_4{left:177px;top:751px;}
+#t1z_4{left:287px;top:751px;}
+#t20_4{left:807px;top:751px;}
+#t21_4{left:144px;top:783px;}
+#t22_4{left:177px;top:783px;}
+#t23_4{left:283px;top:783px;}
+#t24_4{left:807px;top:783px;}
+#t25_4{left:144px;top:814px;}
+#t26_4{left:177px;top:814px;}
+#t27_4{left:346px;top:814px;}
+#t28_4{left:807px;top:814px;}
+#t29_4{left:110px;top:846px;}
+#t2a_4{left:283px;top:846px;}
+#t2b_4{left:807px;top:846px;}
+#t2c_4{left:110px;top:878px;}
+#t2d_4{left:236px;top:878px;}
+#t2e_4{left:807px;top:878px;}
+#t2f_4{left:127px;top:909px;}
+#t2g_4{left:160px;top:909px;}
+#t2h_4{left:249px;top:909px;}
+#t2i_4{left:807px;top:909px;}
+#t2j_4{left:127px;top:941px;}
+#t2k_4{left:160px;top:941px;}
+#t2l_4{left:278px;top:941px;}
+#t2m_4{left:807px;top:941px;}
+#t2n_4{left:127px;top:972px;}
+#t2o_4{left:160px;top:972px;}
+#t2p_4{left:232px;top:972px;}
+#t2q_4{left:807px;top:972px;}
+#t2r_4{left:127px;top:1004px;}
+#t2s_4{left:160px;top:1004px;}
+#t2t_4{left:295px;top:1004px;}
+#t2u_4{left:807px;top:1004px;}
+#t2v_4{left:127px;top:1035px;}
+#t2w_4{left:160px;top:1035px;}
+#t2x_4{left:274px;top:1035px;}
+#t2y_4{left:807px;top:1035px;}
+#t2z_4{left:110px;top:1067px;}
+#t30_4{left:211px;top:1067px;}
+#t31_4{left:807px;top:1067px;}
+#form4_1{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:813px;	width:689px;	height:32px;	text-align:left;	background: transparent;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form4_2{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:718px;	width:689px;	height:32px;	text-align:left;	background: transparent;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form4_3{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:624px;	width:689px;	height:32px;	text-align:left;	background: transparent;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form4_4{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:529px;	width:689px;	height:32px;	text-align:left;	background: transparent;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form4_5{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:434px;	width:706px;	height:32px;	text-align:left;	background: transparent;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form4_6{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:1002px;	width:706px;	height:32px;	text-align:left;	background: transparent;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form4_7{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:339px;	width:706px;	height:32px;	text-align:left;	background: transparent;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form4_8{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:908px;	width:706px;	height:32px;	text-align:left;	background: transparent;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form4_9{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:245px;	width:706px;	height:32px;	text-align:left;	background: transparent;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form4_10{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:591px;	width:689px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_11{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:497px;	width:689px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_12{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:465px;	width:689px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_13{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:781px;	width:689px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_14{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:749px;	width:689px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_15{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:686px;	width:689px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_16{	border-style:none;	z-index:2;	position: absolute;	left:139px;	top:559px;	width:689px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_17{	border-style:none;	z-index:2;	position: absolute;	left:106px;	top:182px;	width:723px;	height:32px;	text-align:left;	background: transparent;	font:normal 24px Arial, Helvetica, sans-serif;}
+#form4_18{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:1033px;	width:706px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_19{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:970px;	width:706px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_20{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:938px;	width:706px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_21{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:307px;	width:706px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_22{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:275px;	width:706px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_23{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:402px;	width:706px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_24{	border-style:none;	z-index:2;	position: absolute;	left:122px;	top:654px;	width:706px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_25{	border-style:none;	z-index:2;	position: absolute;	left:106px;	top:1065px;	width:723px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_26{	border-style:none;	z-index:2;	position: absolute;	left:106px;	top:876px;	width:723px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_27{	border-style:none;	z-index:2;	position: absolute;	left:106px;	top:213px;	width:723px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_28{	border-style:none;	z-index:2;	position: absolute;	left:106px;	top:844px;	width:723px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_29{	border-style:none;	z-index:2;	position: absolute;	left:106px;	top:370px;	width:723px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+#form4_30{	border-style:none;	z-index:2;	position: absolute;	left:106px;	top:150px;	width:723px;	height:34px;	text-align:left;	background: transparent;	font:normal 25px Arial, Helvetica, sans-serif;}
+
+.s4_4{
+	FONT-SIZE: 60px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s1_4{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_4{
+	FONT-SIZE: 60px;
+	FONT-FAMILY: ABCDEE-OpenSans4;
+	color: rgb(0,0,0);
+}
+
+.s2_4{
+	FONT-SIZE: 122px;
+	FONT-FAMILY: ABCDEE-CalibriLight4;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts4" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-CalibriLight4;
+	src :url("4/fonts/ABCDEE-CalibriLight.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans4;
+	src :url("4/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_4" class="t s1_4">1 </div>
+<div id="t2_4" class="t s2_4">Contents </div>
+<div id="t3_4" class="t s3_4">Team Members and Roles:</div>
+<div id="t4_4" class="t s4_4">..........................................................................................................................</div>
+<div id="t5_4" class="t s4_4">2</div>
+<div id="t6_4" class="t s3_4">Executive Summary</div>
+<div id="t7_4" class="t s4_4">.....................................................................................................................................</div>
+<div id="t8_4" class="t s4_4">2</div>
+<div id="t9_4" class="t s3_4">Project Background</div>
+<div id="ta_4" class="t s4_4">.....................................................................................................................................</div>
+<div id="tb_4" class="t s4_4">6</div>
+<div id="tc_4" class="t s3_4">A.</div>
+<div id="td_4" class="t s3_4">Consumer Insight</div>
+<div id="te_4" class="t s4_4">.............................................................................................................................</div>
+<div id="tf_4" class="t s4_4">6</div>
+<div id="tg_4" class="t s3_4">B.</div>
+<div id="th_4" class="t s3_4">Relevance to Digitally Connected Consumer through Customer Analysis</div>
+<div id="ti_4" class="t s4_4">..................................</div>
+<div id="tj_4" class="t s4_4">9</div>
+<div id="tk_4" class="t s3_4">C.</div>
+<div id="tl_4" class="t s3_4">Existing Technology</div>
+<div id="tm_4" class="t s4_4">.......................................................................................................................</div>
+<div id="tn_4" class="t s4_4">10</div>
+<div id="to_4" class="t s3_4">D.</div>
+<div id="tp_4" class="t s3_4">Identify Unmet Market Need</div>
+<div id="tq_4" class="t s4_4">........................................................................................................</div>
+<div id="tr_4" class="t s4_4">10</div>
+<div id="ts_4" class="t s3_4">Prototyping</div>
+<div id="tt_4" class="t s4_4">.................................................................................................................................................</div>
+<div id="tu_4" class="t s4_4">11</div>
+<div id="tv_4" class="t s3_4">A.</div>
+<div id="tw_4" class="t s3_4">Product Concept</div>
+<div id="tx_4" class="t s4_4">............................................................................................................................</div>
+<div id="ty_4" class="t s4_4">11</div>
+<div id="tz_4" class="t s3_4">B.</div>
+<div id="t10_4" class="t s3_4">How the Prototype Works</div>
+<div id="t11_4" class="t s4_4">.............................................................................................................</div>
+<div id="t12_4" class="t s4_4">18</div>
+<div id="t13_4" class="t s3_4">Companion Application:</div>
+<div id="t14_4" class="t s4_4">....................................................................................................................</div>
+<div id="t15_4" class="t s4_4">19</div>
+<div id="t16_4" class="t s3_4">Heating Coil:</div>
+<div id="t17_4" class="t s4_4">.......................................................................................................................................</div>
+<div id="t18_4" class="t s4_4">21</div>
+<div id="t19_4" class="t s3_4">Body/3D Printed Bottom:</div>
+<div id="t1a_4" class="t s4_4">..................................................................................................................</div>
+<div id="t1b_4" class="t s4_4">24</div>
+<div id="t1c_4" class="t s3_4">Temperature Sensor:</div>
+<div id="t1d_4" class="t s4_4">.........................................................................................................................</div>
+<div id="t1e_4" class="t s4_4">29</div>
+<div id="t1f_4" class="t s3_4">Raspberry Pi:</div>
+<div id="t1g_4" class="t s4_4">......................................................................................................................................</div>
+<div id="t1h_4" class="t s4_4">30</div>
+<div id="t1i_4" class="t s3_4">E-Ink Notifier:</div>
+<div id="t1j_4" class="t s4_4">.....................................................................................................................................</div>
+<div id="t1k_4" class="t s4_4">32</div>
+<div id="t1l_4" class="t s3_4">C.</div>
+<div id="t1m_4" class="t s3_4">Prototype Technology Delivers Consumer Need</div>
+<div id="t1n_4" class="t s4_4">.........................................................................</div>
+<div id="t1o_4" class="t s4_4">33</div>
+<div id="t1p_4" class="t s3_4">1.</div>
+<div id="t1q_4" class="t s3_4">COMPANION APP</div>
+<div id="t1r_4" class="t s4_4">.......................................................................................................................</div>
+<div id="t1s_4" class="t s4_4">33</div>
+<div id="t1t_4" class="t s3_4">2.</div>
+<div id="t1u_4" class="t s3_4">BODY</div>
+<div id="t1v_4" class="t s4_4">...........................................................................................................................................</div>
+<div id="t1w_4" class="t s4_4">34</div>
+<div id="t1x_4" class="t s3_4">3.</div>
+<div id="t1y_4" class="t s3_4">E-INK NOTIFIER</div>
+<div id="t1z_4" class="t s4_4">...........................................................................................................................</div>
+<div id="t20_4" class="t s4_4">35</div>
+<div id="t21_4" class="t s3_4">4.</div>
+<div id="t22_4" class="t s3_4">HEATING ROD</div>
+<div id="t23_4" class="t s4_4">............................................................................................................................</div>
+<div id="t24_4" class="t s4_4">36</div>
+<div id="t25_4" class="t s3_4">5.</div>
+<div id="t26_4" class="t s3_4">TEMPERATURE SENSOR</div>
+<div id="t27_4" class="t s4_4">.............................................................................................................</div>
+<div id="t28_4" class="t s4_4">37</div>
+<div id="t29_4" class="t s3_4">Resources and Timeline</div>
+<div id="t2a_4" class="t s4_4">............................................................................................................................</div>
+<div id="t2b_4" class="t s4_4">38</div>
+<div id="t2c_4" class="t s3_4">Business Strategy</div>
+<div id="t2d_4" class="t s4_4">.......................................................................................................................................</div>
+<div id="t2e_4" class="t s4_4">39</div>
+<div id="t2f_4" class="t s3_4">A.</div>
+<div id="t2g_4" class="t s3_4">Market Plan</div>
+<div id="t2h_4" class="t s4_4">....................................................................................................................................</div>
+<div id="t2i_4" class="t s4_4">39</div>
+<div id="t2j_4" class="t s3_4">B.</div>
+<div id="t2k_4" class="t s3_4">Operations Plan</div>
+<div id="t2l_4" class="t s4_4">.............................................................................................................................</div>
+<div id="t2m_4" class="t s4_4">40</div>
+<div id="t2n_4" class="t s3_4">C.</div>
+<div id="t2o_4" class="t s3_4">Sales Plan</div>
+<div id="t2p_4" class="t s4_4">........................................................................................................................................</div>
+<div id="t2q_4" class="t s4_4">41</div>
+<div id="t2r_4" class="t s3_4">D.</div>
+<div id="t2s_4" class="t s3_4">Cost of Production</div>
+<div id="t2t_4" class="t s4_4">.........................................................................................................................</div>
+<div id="t2u_4" class="t s4_4">41</div>
+<div id="t2v_4" class="t s3_4">E.</div>
+<div id="t2w_4" class="t s3_4">Pricing Strategy</div>
+<div id="t2x_4" class="t s4_4">..............................................................................................................................</div>
+<div id="t2y_4" class="t s4_4">43</div>
+<div id="t2z_4" class="t s3_4">WORKS CITED</div>
+<div id="t30_4" class="t s4_4">.............................................................................................................................................</div>
+<div id="t31_4" class="t s4_4">44</div>
+
+<!-- End text definitions -->
+
+
+<!-- Begin Form Data -->
+<form>
+<input type="button"  tabindex="22"  id="form4_1" name="172 0 R"  pdfFieldName="172 0 R" onclick="IDRViewer.goToPage(40);" style="cursor:pointer;"  title="Page 40" />
+<input type="button"  tabindex="19"  id="form4_2" name="176 0 R"  pdfFieldName="176 0 R" onclick="IDRViewer.goToPage(37);" style="cursor:pointer;"  title="Page 37" />
+<input type="button"  tabindex="16"  id="form4_3" name="175 0 R"  pdfFieldName="175 0 R" onclick="IDRViewer.goToPage(35);" style="cursor:pointer;"  title="Page 35" />
+<input type="button"  tabindex="13"  id="form4_4" name="164 0 R"  pdfFieldName="164 0 R" onclick="IDRViewer.goToPage(27);" style="cursor:pointer;"  title="Page 27" />
+<input type="button"  tabindex="10"  id="form4_5" name="173 0 R"  pdfFieldName="173 0 R" onclick="IDRViewer.goToPage(21);" style="cursor:pointer;"  title="Page 21" />
+<input type="button"  tabindex="28"  id="form4_6" name="189 0 R"  pdfFieldName="189 0 R" onclick="IDRViewer.goToPage(44);" style="cursor:pointer;"  title="Page 44" />
+<input type="button"  tabindex="7"  id="form4_7" name="185 0 R"  pdfFieldName="185 0 R" onclick="IDRViewer.goToPage(13);" style="cursor:pointer;"  title="Page 13" />
+<input type="button"  tabindex="25"  id="form4_8" name="168 0 R"  pdfFieldName="168 0 R" onclick="IDRViewer.goToPage(42);" style="cursor:pointer;"  title="Page 42" />
+<input type="button"  tabindex="4"  id="form4_9" name="181 0 R"  pdfFieldName="181 0 R" onclick="IDRViewer.goToPage(9);" style="cursor:pointer;"  title="Page 9" />
+<input type="button"  tabindex="15"  id="form4_10" name="174 0 R"  pdfFieldName="174 0 R" onclick="IDRViewer.goToPage(33);" style="cursor:pointer;"  title="Page 33" />
+<input type="button"  tabindex="12"  id="form4_11" name="184 0 R"  pdfFieldName="184 0 R" onclick="IDRViewer.goToPage(24);" style="cursor:pointer;"  title="Page 24" />
+<input type="button"  tabindex="11"  id="form4_12" name="179 0 R"  pdfFieldName="179 0 R" onclick="IDRViewer.goToPage(22);" style="cursor:pointer;"  title="Page 22" />
+<input type="button"  tabindex="21"  id="form4_13" name="165 0 R"  pdfFieldName="165 0 R" onclick="IDRViewer.goToPage(39);" style="cursor:pointer;"  title="Page 39" />
+<input type="button"  tabindex="20"  id="form4_14" name="171 0 R"  pdfFieldName="171 0 R" onclick="IDRViewer.goToPage(38);" style="cursor:pointer;"  title="Page 38" />
+<input type="button"  tabindex="18"  id="form4_15" name="182 0 R"  pdfFieldName="182 0 R" onclick="IDRViewer.goToPage(36);" style="cursor:pointer;"  title="Page 36" />
+<input type="button"  tabindex="14"  id="form4_16" name="166 0 R"  pdfFieldName="166 0 R" onclick="IDRViewer.goToPage(32);" style="cursor:pointer;"  title="Page 32" />
+<input type="button"  tabindex="2"  id="form4_17" name="188 0 R"  pdfFieldName="188 0 R" onclick="IDRViewer.goToPage(5);" style="cursor:pointer;"  title="Page 5" />
+<input type="button"  tabindex="29"  id="form4_18" name="191 0 R"  pdfFieldName="191 0 R" onclick="IDRViewer.goToPage(46);" style="cursor:pointer;"  title="Page 46" />
+<input type="button"  tabindex="27"  id="form4_19" name="190 0 R"  pdfFieldName="190 0 R" onclick="IDRViewer.goToPage(44);" style="cursor:pointer;"  title="Page 44" />
+<input type="button"  tabindex="26"  id="form4_20" name="167 0 R"  pdfFieldName="167 0 R" onclick="IDRViewer.goToPage(43);" style="cursor:pointer;"  title="Page 43" />
+<input type="button"  tabindex="6"  id="form4_21" name="183 0 R"  pdfFieldName="183 0 R" onclick="IDRViewer.goToPage(13);" style="cursor:pointer;"  title="Page 13" />
+<input type="button"  tabindex="5"  id="form4_22" name="180 0 R"  pdfFieldName="180 0 R" onclick="IDRViewer.goToPage(12);" style="cursor:pointer;"  title="Page 12" />
+<input type="button"  tabindex="9"  id="form4_23" name="187 0 R"  pdfFieldName="187 0 R" onclick="IDRViewer.goToPage(14);" style="cursor:pointer;"  title="Page 14" />
+<input type="button"  tabindex="17"  id="form4_24" name="178 0 R"  pdfFieldName="178 0 R" onclick="IDRViewer.goToPage(36);" style="cursor:pointer;"  title="Page 36" />
+<input type="button"  tabindex="30"  id="form4_25" name="192 0 R"  pdfFieldName="192 0 R" onclick="IDRViewer.goToPage(46);" style="cursor:pointer;"  title="Page 46" />
+<input type="button"  tabindex="24"  id="form4_26" name="177 0 R"  pdfFieldName="177 0 R" onclick="IDRViewer.goToPage(42);" style="cursor:pointer;"  title="Page 42" />
+<input type="button"  tabindex="3"  id="form4_27" name="163 0 R"  pdfFieldName="163 0 R" onclick="IDRViewer.goToPage(9);" style="cursor:pointer;"  title="Page 9" />
+<input type="button"  tabindex="23"  id="form4_28" name="186 0 R"  pdfFieldName="186 0 R" onclick="IDRViewer.goToPage(41);" style="cursor:pointer;"  title="Page 41" />
+<input type="button"  tabindex="8"  id="form4_29" name="169 0 R"  pdfFieldName="169 0 R" onclick="IDRViewer.goToPage(14);" style="cursor:pointer;"  title="Page 14" />
+<input type="button"  tabindex="1"  id="form4_30" name="170 0 R"  pdfFieldName="170 0 R" onclick="IDRViewer.goToPage(5);" style="cursor:pointer;"  title="Page 5" />
+
+</form>
+<!-- End Form Data -->
+<!-- Begin page background -->
+<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg4"><object width="935" height="1210" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld4" type="text/javascript">
+
+var isIE = false;
+var f4 = [['t3_4',756],['t6_4',558],['t9_4',556],['td_4',502],['th_4',2023],['tl_4',558],['tp_4',811],['tw_4',474],['t10_4',730],['t13_4',681],['t16_4',359],['t19_4',715],['t1c_4',601],['t1f_4',374],['t1i_4',386],['t1m_4',1346],['t1q_4',501],['t1y_4',434],['t22_4',404],['t26_4',667],['t29_4',675],['t2c_4',500],['t2g_4',340],['t2k_4',457],['t2o_4',285],['t2s_4',528],['t2w_4',441],['t2z_4',395]];
+function load4(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f4);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 110;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_4");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

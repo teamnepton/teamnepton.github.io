@@ -1,0 +1,249 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load8();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_8{left:816px;top:1132px;}
+#t2_8{left:165px;top:111px;}
+#t3_8{left:165px;top:137px;}
+#t4_8{left:220px;top:190px;}
+#t5_8{left:165px;top:216px;}
+#t6_8{left:165px;top:243px;}
+#t7_8{left:165px;top:269px;}
+#t8_8{left:165px;top:295px;}
+#t9_8{left:165px;top:321px;}
+#ta_8{left:165px;top:348px;}
+#tb_8{left:165px;top:374px;}
+#tc_8{left:165px;top:400px;}
+#td_8{left:661px;top:400px;}
+#te_8{left:165px;top:427px;}
+#tf_8{left:165px;top:453px;}
+#tg_8{left:165px;top:479px;}
+#th_8{left:165px;top:506px;}
+#ti_8{left:165px;top:558px;}
+#tj_8{left:220px;top:585px;}
+#tk_8{left:165px;top:611px;}
+#tl_8{left:165px;top:637px;}
+#tm_8{left:165px;top:664px;}
+#tn_8{left:165px;top:690px;}
+#to_8{left:165px;top:716px;}
+#tp_8{left:220px;top:743px;}
+#tq_8{left:165px;top:769px;}
+#tr_8{left:165px;top:822px;}
+#ts_8{left:220px;top:848px;}
+#tt_8{left:165px;top:874px;}
+#tu_8{left:165px;top:901px;}
+#tv_8{left:165px;top:927px;}
+#tw_8{left:618px;top:927px;}
+#tx_8{left:165px;top:953px;}
+#ty_8{left:165px;top:980px;}
+#tz_8{left:165px;top:1006px;}
+#t10_8{left:220px;top:1032px;}
+#t11_8{left:165px;top:1059px;}
+
+.s1_8{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_8{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans-Bold8;
+	color: rgb(0,0,0);
+}
+
+.s2_8{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans8;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts8" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans-Bold8;
+	src :url("8/fonts/ABCDEE-OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans8;
+	src :url("8/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_8" class="t s1_8">5 </div>
+<div id="t2_8" class="t s2_8">components and their specific respective links to consumer requirements are </div>
+<div id="t3_8" class="t s2_8">shown in more detail in the supporting documentation. </div>
+<div id="t4_8" class="t s2_8">Given the time and funding provided by SASE, the group was able to create a </div>
+<div id="t5_8" class="t s2_8">completely functioning prototype of the Nepton. All components present in a </div>
+<div id="t6_8" class="t s2_8">functioning finished product are present in the current prototype, the difference </div>
+<div id="t7_8" class="t s2_8">being the implementation. With the limited funding, many certain components that </div>
+<div id="t8_8" class="t s2_8">would need to be custom-made had to be bought commercial off-the-shelf. These </div>
+<div id="t9_8" class="t s2_8">components were then modified as far as possible given the limited tooling and </div>
+<div id="ta_8" class="t s2_8">manufacturing capabilities. The raspberry pi is much larger than the intended final </div>
+<div id="tb_8" class="t s2_8">board. The e-ink notifier, which would normally encompass the full outer shell of the </div>
+<div id="tc_8" class="t s2_8">Nepton, is represented by a 3 by 2 inch notifier. Certain unruly </div>
+<div id="td_8" class="t s2_8">wiring through the </div>
+<div id="te_8" class="t s2_8">cap would not exist in the final product. An extension was made for the bottom of </div>
+<div id="tf_8" class="t s2_8">the case to represent the full depth of the enclosure that would house all the </div>
+<div id="tg_8" class="t s2_8">internal components. We had to make these modifications for the current alpha </div>
+<div id="th_8" class="t s2_8">prototype, and we have solutions for each of them given more funding and time. </div>
+<div id="ti_8" class="t s3_8">III. RESOURCES AND TIMELINE</div>
+<div id="tj_8" class="t s2_8">The approximated cost of Nepton's raw components is ~$40. The expected </div>
+<div id="tk_8" class="t s2_8">costs of custom machining for the body and heat sink, the team anticipates the </div>
+<div id="tl_8" class="t s2_8">prototyping cost of the Nepton to significantly increase this cost. Multiple prototype </div>
+<div id="tm_8" class="t s2_8">iterations would be required to arrive at an alpha-stage prototype and realistically, </div>
+<div id="tn_8" class="t s2_8">the team anticipates the overall cost to be in excess of $1,000. A final prototype </div>
+<div id="to_8" class="t s2_8">would be reasonably expected to be well in excess of $3,000. </div>
+<div id="tp_8" class="t s2_8">The team's project schedule for the planning process and prototyping </div>
+<div id="tq_8" class="t s2_8">process can be seen in the Gantt chart within the appendix. </div>
+<div id="tr_8" class="t s3_8">IV. BUSINESS STRATEGY</div>
+<div id="ts_8" class="t s2_8">One of the most important aspects of team Nepton’s business strategy is the </div>
+<div id="tt_8" class="t s2_8">manufacturing and supply chain. Based off our financial analysis, the team has </div>
+<div id="tu_8" class="t s2_8">determined that the Nepton will cost approximately $60 for raw materials and </div>
+<div id="tv_8" class="t s2_8">manufacturing. Given this information, the team decided </div>
+<div id="tw_8" class="t s2_8">price the Nepton at $100 </div>
+<div id="tx_8" class="t s2_8">as it is a premium product. With this pricing model, we are projected to have 40% </div>
+<div id="ty_8" class="t s2_8">profit per unit sale. To reduce manufacturing costs,we plan to outsource our </div>
+<div id="tz_8" class="t s2_8">manufacturing as well.  </div>
+<div id="t10_8" class="t s2_8">Distribution will occur through both online retailers such as Amazon as well </div>
+<div id="t11_8" class="t s2_8">as brick and mortar consignment channels. The former allows a large amount of </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg8Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg8"><object width="935" height="1210" data="8/8.svg" type="image/svg+xml" id="pdf8" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld8" type="text/javascript">
+
+var isIE = false;
+var f8 = [['t2_8',2419],['t3_8',1732],['t4_8',2395],['t5_8',2407],['t6_8',2510],['t7_8',2600],['t8_8',2559],['t9_8',2489],['ta_8',2574],['tb_8',2638],['tc_8',1947],['td_8',582],['te_8',2558],['tf_8',2400],['tg_8',2498],['th_8',2523],['ti_8',989],['tj_8',2340],['tk_8',2469],['tl_8',2611],['tm_8',2574],['tn_8',2477],['to_8',1901],['tp_8',2178],['tq_8',1859],['tr_8',774],['ts_8',2399],['tt_8',2456],['tu_8',2441],['tv_8',1777],['tw_8',778],['tx_8',2537],['ty_8',2387],['tz_8',726],['t10_8',2357],['t11_8',2510]];
+function load8(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f8);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 38;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_8");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

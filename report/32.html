@@ -1,0 +1,203 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load32();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_32{left:806px;top:1132px;}
+#t2_32{left:165px;top:111px;}
+#t3_32{left:220px;top:166px;}
+#t4_32{left:165px;top:192px;}
+#t5_32{left:165px;top:219px;}
+#t6_32{left:165px;top:245px;}
+#t7_32{left:165px;top:271px;}
+#t8_32{left:165px;top:298px;}
+#t9_32{left:262px;top:298px;}
+#ta_32{left:165px;top:324px;}
+#tb_32{left:165px;top:350px;}
+#tc_32{left:165px;top:377px;}
+#td_32{left:165px;top:403px;}
+#te_32{left:316px;top:896px;}
+
+.s2_32{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: ABCDEE-OpenSans-Bold32;
+	color: rgb(102,102,102);
+}
+
+.s1_32{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_32{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans32;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts32" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans-Bold32;
+	src :url("32/fonts/ABCDEE-OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans32;
+	src :url("32/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_32" class="t s1_32">29 </div>
+<div id="t2_32" class="t s2_32">Temperature Sensor: </div>
+<div id="t3_32" class="t s3_32">The objective for the temperature sensor was to be able to implement a </div>
+<div id="t4_32" class="t s3_32">means to be able to read the immediate temperature inside the Nepton. This </div>
+<div id="t5_32" class="t s3_32">temperature is leveraged to perform many of the Nepton’s control functionality, </div>
+<div id="t6_32" class="t s3_32">such as automatic heating shut off, changing the E-Ink screen to the appropriate </div>
+<div id="t7_32" class="t s3_32">gradient, and temperature calibration. For our prototype, the team had utilized a </div>
+<div id="t8_32" class="t s3_32">waterproof </div>
+<div id="t9_32" class="t s3_32">DS18B20 temperature sensor and inserted it through our modified cap </div>
+<div id="ta_32" class="t s3_32">as seen in pictures below. In terms of connecting the temperature sensor to the </div>
+<div id="tb_32" class="t s3_32">Raspberry Pi, we wire it to a breadboard with a 4.7k resistor and connect via GPIO </div>
+<div id="tc_32" class="t s3_32">pin 27. We leverage the W1ThermSensor python library to parse and read the </div>
+<div id="td_32" class="t s3_32">incoming temperature data.  </div>
+<div id="te_32" class="t s3_32">Figure 18: Modified Cap with Holes and wiring </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg32Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg32"><object width="935" height="1210" data="32/32.svg" type="image/svg+xml" id="pdf32" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld32" type="text/javascript">
+
+var isIE = false;
+var f32 = [['t2_32',769],['t3_32',2248],['t4_32',2411],['t5_32',2498],['t6_32',2506],['t7_32',2524],['t9_32',2219],['ta_32',2492],['tb_32',2552],['tc_32',2423],['td_32',897],['te_32',1434]];
+function load32(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f32);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 15;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_32");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

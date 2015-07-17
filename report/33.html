@@ -1,0 +1,211 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load33();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_33{left:806px;top:1132px;}
+#t2_33{left:234px;top:495px;}
+#t3_33{left:165px;top:534px;}
+#t4_33{left:220px;top:588px;}
+#t5_33{left:165px;top:615px;}
+#t6_33{left:165px;top:641px;}
+#t7_33{left:165px;top:667px;}
+#t8_33{left:165px;top:694px;}
+#t9_33{left:165px;top:720px;}
+#ta_33{left:165px;top:746px;}
+#tb_33{left:165px;top:773px;}
+#tc_33{left:165px;top:799px;}
+#td_33{left:165px;top:825px;}
+#te_33{left:165px;top:852px;}
+#tf_33{left:165px;top:878px;}
+#tg_33{left:165px;top:904px;}
+#th_33{left:165px;top:931px;}
+#ti_33{left:165px;top:957px;}
+
+.s1_33{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_33{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans33;
+	color: rgb(0,0,0);
+}
+
+.s3_33{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: ABCDEE-OpenSans-Bold33;
+	color: rgb(102,102,102);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts33" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans-Bold33;
+	src :url("33/fonts/ABCDEE-OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans33;
+	src :url("33/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_33" class="t s1_33">30 </div>
+<div id="t2_33" class="t s2_33">Figure 19: Modified Cap with Heating Coil and Temperature Sensor </div>
+<div id="t3_33" class="t s3_33">Raspberry Pi: </div>
+<div id="t4_33" class="t s2_33">The objective for the Raspberry Pi is to act as a microcontroller to control all </div>
+<div id="t5_33" class="t s2_33">functionality of Nepton. For a market ready Nepton, this microcontroller would be a </div>
+<div id="t6_33" class="t s2_33">customized one that is significantly smaller than the Raspberry Pi. The Raspberry Pi </div>
+<div id="t7_33" class="t s2_33">is much larger because it is meant to be a general purpose processor. In our </div>
+<div id="t8_33" class="t s2_33">prototype, which can be seen below, the Raspberry Pi is powered by a micro-USB </div>
+<div id="t9_33" class="t s2_33">cable, has a wireless USB dongle to allow us to remote into the system, and utilizes </div>
+<div id="ta_33" class="t s2_33">the majority of the GPIO pins. The E-Ink screen attaches to the Pi through 26 pins </div>
+<div id="tb_33" class="t s2_33">and the rest of the pins are utilized for buttons, the solid state relay (SSR), and the </div>
+<div id="tc_33" class="t s2_33">temperature sensor. The heating element is not directly attached to the Pi but is </div>
+<div id="td_33" class="t s2_33">controlled by it. The heating element is attached to an extension cord that has had </div>
+<div id="te_33" class="t s2_33">it’s hotwire side snipped. The snipped ends had ring terminals installed and these </div>
+<div id="tf_33" class="t s2_33">were installed on the SSR.The SSR acts as an electromagnetic switch that turns the </div>
+<div id="tg_33" class="t s2_33">heating element on and off, allowing electricity to flow in or vice-versa. The actual </div>
+<div id="th_33" class="t s2_33">Nepton program that controls our product is also housed inside the Pi and is written </div>
+<div id="ti_33" class="t s2_33">in Python.  </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg33Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg33"><object width="935" height="1210" data="33/33.svg" type="image/svg+xml" id="pdf33" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld33" type="text/javascript">
+
+var isIE = false;
+var f33 = [['t2_33',2089],['t3_33',482],['t4_33',2367],['t5_33',2616],['t6_33',2601],['t7_33',2381],['t8_33',2532],['t9_33',2584],['ta_33',2529],['tb_33',2553],['tc_33',2501],['td_33',2575],['te_33',2546],['tf_33',2566],['tg_33',2540],['th_33',2639],['ti_33',332]];
+function load33(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f33);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 19;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_33");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

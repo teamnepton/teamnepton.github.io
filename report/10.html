@@ -1,0 +1,194 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load10();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_10{left:816px;top:1132px;}
+#t2_10{left:248px;top:111px;}
+#t3_10{left:275px;top:111px;}
+#t4_10{left:275px;top:137px;}
+#t5_10{left:275px;top:164px;}
+#t6_10{left:220px;top:190px;}
+#t7_10{left:165px;top:216px;}
+#t8_10{left:165px;top:243px;}
+#t9_10{left:165px;top:269px;}
+#ta_10{left:165px;top:295px;}
+#tb_10{left:165px;top:321px;}
+#tc_10{left:165px;top:348px;}
+#td_10{left:165px;top:374px;}
+#te_10{left:161px;top:923px;}
+#tf_10{left:418px;top:949px;}
+
+.s1_10{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_10{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans10;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts10" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans10;
+	src :url("10/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_10" class="t s1_10">7 </div>
+<div id="t2_10" class="t s2_10">ii.</div>
+<div id="t3_10" class="t s2_10">Of those 66, 20 responded that thermoses were aesthetically </div>
+<div id="t4_10" class="t s2_10">unpleasing and 32 responded that they did not see a need for a </div>
+<div id="t5_10" class="t s2_10">thermos. </div>
+<div id="t6_10" class="t s2_10">The team is targeting these two potential markets with an emphasis on </div>
+<div id="t7_10" class="t s2_10">features of Nepton that address the issues brought up by the surveyed. The inability </div>
+<div id="t8_10" class="t s2_10">to tell whether the beverage inside a thermos is at a satisfactory temperature for </div>
+<div id="t9_10" class="t s2_10">consumption Nepton’s easily identifiable color-changing feature that alerts the user </div>
+<div id="ta_10" class="t s2_10">to the temperature stages of the beverage (Too hot, satisfactory, lukewarm). </div>
+<div id="tb_10" class="t s2_10">Inconvenience in using and/or carrying a thermos and inclusion of an adjustable </div>
+<div id="tc_10" class="t s2_10">carry-strap that allows Nepton to be carried alongside a bag or slung on the </div>
+<div id="td_10" class="t s2_10">shoulder. </div>
+<div id="te_10" class="t s2_10">Figure 1: Survey Results – “What are complaints (if any) with your hot beverage </div>
+<div id="tf_10" class="t s2_10">experience?” </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg10Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg10"><object width="935" height="1210" data="10/10.svg" type="image/svg+xml" id="pdf10" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld10" type="text/javascript">
+
+var isIE = false;
+var f10 = [['t3_10',1904],['t4_10',1988],['t6_10',2220],['t7_10',2632],['t8_10',2525],['t9_10',2609],['ta_10',2382],['tb_10',2505],['tc_10',2364],['te_10',2449]];
+function load10(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f10);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 16;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_10");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

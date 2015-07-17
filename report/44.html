@@ -1,0 +1,243 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load44();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_44{left:806px;top:1132px;}
+#t2_44{left:165px;top:111px;}
+#t3_44{left:165px;top:137px;}
+#t4_44{left:165px;top:164px;}
+#t5_44{left:165px;top:190px;}
+#t6_44{left:138px;top:232px;}
+#t7_44{left:165px;top:232px;}
+#t8_44{left:220px;top:289px;}
+#t9_44{left:165px;top:315px;}
+#ta_44{left:165px;top:342px;}
+#tb_44{left:165px;top:368px;}
+#tc_44{left:165px;top:394px;}
+#td_44{left:165px;top:421px;}
+#te_44{left:165px;top:447px;}
+#tf_44{left:165px;top:473px;}
+#tg_44{left:165px;top:499px;}
+#th_44{left:220px;top:552px;}
+#ti_44{left:165px;top:578px;}
+#tj_44{left:165px;top:605px;}
+#tk_44{left:165px;top:631px;}
+#tl_44{left:165px;top:658px;}
+#tm_44{left:165px;top:684px;}
+#tn_44{left:165px;top:710px;}
+#to_44{left:138px;top:752px;}
+#tp_44{left:165px;top:752px;}
+#tq_44{left:220px;top:809px;}
+#tr_44{left:165px;top:835px;}
+#ts_44{left:165px;top:862px;}
+#tt_44{left:165px;top:888px;}
+#tu_44{left:165px;top:914px;}
+#tv_44{left:165px;top:941px;}
+#tw_44{left:165px;top:967px;}
+#tx_44{left:165px;top:993px;}
+#ty_44{left:165px;top:1020px;}
+
+.s1_44{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_44{
+	FONT-SIZE: 79px;
+	FONT-FAMILY: ABCDEE-OpenSans-Bold44;
+	color: rgb(0,0,0);
+}
+
+.s2_44{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans44;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts44" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans-Bold44;
+	src :url("44/fonts/ABCDEE-OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans44;
+	src :url("44/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_44" class="t s1_44">41 </div>
+<div id="t2_44" class="t s2_44">showroom the product while the retailer does not pay for the product until it has </div>
+<div id="t3_44" class="t s2_44">sold. This will be a stepping stone to popularize the product. Once buyer confidence </div>
+<div id="t4_44" class="t s2_44">has been established, the retail scope will be expanded to include normal retail </div>
+<div id="t5_44" class="t s2_44">channels and we will aim to negotiate further contracts to sell the product. </div>
+<div id="t6_44" class="t s3_44">C.</div>
+<div id="t7_44" class="t s3_44">Sales Plan </div>
+<div id="t8_44" class="t s2_44">Based on the consumer research that the group conducted, the Nepton is </div>
+<div id="t9_44" class="t s2_44">targeted towards two group of people. The first is to individuals who own a thermos </div>
+<div id="ta_44" class="t s2_44">but feel that their hot beverage experience could be improved. The second is </div>
+<div id="tb_44" class="t s2_44">individuals who do not own or use a thermos. These people could be of any age, </div>
+<div id="tc_44" class="t s2_44">race, creed, or gender. The key defining factor are people who consume hot or </div>
+<div id="td_44" class="t s2_44">warm beverages. A large percentage of the world consumes some form of hot </div>
+<div id="te_44" class="t s2_44">beverage, either coffee, or tea, soup, etc. What the Nepton is trying to appeal to is </div>
+<div id="tf_44" class="t s2_44">these people’s need for a device that allows them to enjoy their drinks for longer </div>
+<div id="tg_44" class="t s2_44">periods of time, without the hassle. </div>
+<div id="th_44" class="t s2_44">The way that team Nepton is selling this idea to their potential customers is </div>
+<div id="ti_44" class="t s2_44">through the angle of convenience and ease. The Nepton is very easy to use, and can </div>
+<div id="tj_44" class="t s2_44">seamlessly fits into anyone’s lifestyle. While it is a premium product and does cost </div>
+<div id="tk_44" class="t s2_44">more than other methods for enjoying warm beverages, this doesn’t deter people </div>
+<div id="tl_44" class="t s2_44">from purchasing higher quality devices. A perfect example is the Apple company’s </div>
+<div id="tm_44" class="t s2_44">iphone line. Team Nepton is trying to provide quality hot beverage thermoses for </div>
+<div id="tn_44" class="t s2_44">those who truly enjoy their hot beverages.  </div>
+<div id="to_44" class="t s3_44">D.</div>
+<div id="tp_44" class="t s3_44">Cost of Production </div>
+<div id="tq_44" class="t s2_44">Based off our financial analysis, we have determined that the Nepton will </div>
+<div id="tr_44" class="t s2_44">cost approximately $50 for raw materials and $10 manufacturing. Although the </div>
+<div id="ts_44" class="t s2_44">prototyping bill of materials shows a significantly larger amount being spent on the </div>
+<div id="tt_44" class="t s2_44">prototype (roughly $150), this was due to the fact that we did not have the means to </div>
+<div id="tu_44" class="t s2_44">buy in bulk or develop our own custom parts and thus had to buy them from retail </div>
+<div id="tv_44" class="t s2_44">stores. The bill of materials below shows the theoretical cost of raw materials for </div>
+<div id="tw_44" class="t s2_44">the Nepton for manufacturing and the actual cost to build the Nepton prototype. </div>
+<div id="tx_44" class="t s2_44">The prices for raw materials are based on certain existing products similar to the </div>
+<div id="ty_44" class="t s2_44">products that the team needs.  </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg44Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg44"><object width="935" height="1210" data="44/44.svg" type="image/svg+xml" id="pdf44" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld44" type="text/javascript">
+
+var isIE = false;
+var f44 = [['t2_44',2526],['t3_44',2622],['t4_44',2472],['t5_44',2328],['t7_44',397],['t8_44',2306],['t9_44',2625],['ta_44',2404],['tb_44',2510],['tc_44',2452],['td_44',2439],['te_44',2551],['tf_44',2516],['tg_44',1103],['th_44',2354],['ti_44',2622],['tj_44',2555],['tk_44',2552],['tl_44',2554],['tm_44',2534],['tn_44',1338],['tp_44',733],['tq_44',2280],['tr_44',2472],['ts_44',2594],['tt_44',2624],['tu_44',2580],['tv_44',2520],['tw_44',2527],['tx_44',2520],['ty_44',965]];
+function load44(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f44);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 35;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_44");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

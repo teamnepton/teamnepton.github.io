@@ -1,0 +1,247 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load6();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_6{left:816px;top:1132px;}
+#t2_6{left:220px;top:111px;}
+#t3_6{left:165px;top:137px;}
+#t4_6{left:165px;top:164px;}
+#t5_6{left:165px;top:190px;}
+#t6_6{left:165px;top:216px;}
+#t7_6{left:165px;top:243px;}
+#t8_6{left:165px;top:269px;}
+#t9_6{left:165px;top:295px;}
+#ta_6{left:165px;top:321px;}
+#tb_6{left:165px;top:348px;}
+#tc_6{left:165px;top:374px;}
+#td_6{left:165px;top:400px;}
+#te_6{left:165px;top:427px;}
+#tf_6{left:165px;top:453px;}
+#tg_6{left:165px;top:479px;}
+#th_6{left:165px;top:506px;}
+#ti_6{left:165px;top:532px;}
+#tj_6{left:165px;top:558px;}
+#tk_6{left:220px;top:585px;}
+#tl_6{left:165px;top:611px;}
+#tm_6{left:165px;top:637px;}
+#tn_6{left:165px;top:664px;}
+#to_6{left:165px;top:690px;}
+#tp_6{left:165px;top:716px;}
+#tq_6{left:165px;top:743px;}
+#tr_6{left:165px;top:769px;}
+#ts_6{left:165px;top:795px;}
+#tt_6{left:165px;top:822px;}
+#tu_6{left:165px;top:848px;}
+#tv_6{left:165px;top:874px;}
+#tw_6{left:165px;top:927px;}
+#tx_6{left:220px;top:953px;}
+#ty_6{left:165px;top:980px;}
+#tz_6{left:165px;top:1006px;}
+#t10_6{left:165px;top:1032px;}
+
+.s1_6{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_6{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans-Bold6;
+	color: rgb(0,0,0);
+}
+
+.s2_6{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans6;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts6" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans-Bold6;
+	src :url("6/fonts/ABCDEE-OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans6;
+	src :url("6/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_6" class="t s1_6">3 </div>
+<div id="t2_6" class="t s2_6">As referenced in our Appendix, a market survey was also disseminated to </div>
+<div id="t3_6" class="t s2_6">evaluate the market need for the Nepton. After examining over 100 replies, we have </div>
+<div id="t4_6" class="t s2_6">identified two potential markets, one that believes their hot beverage drinking </div>
+<div id="t5_6" class="t s2_6">experience could be improved and one that does not own or use a thermos. In the </div>
+<div id="t6_6" class="t s2_6">former, it was identified that they regularly used thermoses but couldn’t accurately </div>
+<div id="t7_6" class="t s2_6">determine the temperature of the liquid inside and whether it is safe to drink. In the </div>
+<div id="t8_6" class="t s2_6">latter, it was identified that that those who do not use thermoses choose not to due </div>
+<div id="t9_6" class="t s2_6">to their inconvenience. The Nepton addresses both those markets through its heat </div>
+<div id="ta_6" class="t s2_6">sensing capabilities and convenient design choices (fits in most cup holders, easy to </div>
+<div id="tb_6" class="t s2_6">clean, lightweight). In our research into the hot beverage market, we also discovered </div>
+<div id="tc_6" class="t s2_6">the shocking revelation that consuming overly hot tea, one of the most popular hot </div>
+<div id="td_6" class="t s2_6">beverages in the world, was linked to esophageal squamous cell carcinoma, a form </div>
+<div id="te_6" class="t s2_6">of esophageal cancer. The Nepton would attempt to mitigate this risk by warning </div>
+<div id="tf_6" class="t s2_6">users when the drink is past the safe drinking temperature of 137 F. In terms of </div>
+<div id="tg_6" class="t s2_6">existing products, there have been smart thermoses created, such as the SmartGear </div>
+<div id="th_6" class="t s2_6">Thermos (See Appendix), but the Nepton is the first that is autonomous from any </div>
+<div id="ti_6" class="t s2_6">cable, is calibrated to the user's temperature preference, and alerts the user in a </div>
+<div id="tj_6" class="t s2_6">pleasing, simplistic way. </div>
+<div id="tk_6" class="t s2_6">Our group's methodology in approaching this project was to brainstorm </div>
+<div id="tl_6" class="t s2_6">difficult or unpleasing situations we encounter daily and then formulate an </div>
+<div id="tm_6" class="t s2_6">invention to address it. After the Nepton was conceptualized, the next step was to </div>
+<div id="tn_6" class="t s2_6">determine if a market need was present. Surveys were disseminated at this point </div>
+<div id="to_6" class="t s2_6">and a market was evaluated. The following step involved researching feasibility </div>
+<div id="tp_6" class="t s2_6">(Proof of concepts can be seen in the Appendix) and designing the product. After </div>
+<div id="tq_6" class="t s2_6">the design is complete the prototyping stage begins. The group will perform </div>
+<div id="tr_6" class="t s2_6">iterative development, starting with the physical components to facilitate testing. </div>
+<div id="ts_6" class="t s2_6">We will develop individual portions of the Nepton and then proceed to integrate and </div>
+<div id="tt_6" class="t s2_6">test. The app will be developed in parallel and will be integrated after the hardware </div>
+<div id="tu_6" class="t s2_6">has been integrated. We plan to utilize for funds what SASE has provided as well as </div>
+<div id="tv_6" class="t s2_6">out-of-pocket funding if necessary. </div>
+<div id="tw_6" class="t s3_6">II. PROTOTYPE</div>
+<div id="tx_6" class="t s2_6">From the user needs gathered and interpreted in the survey, the group then </div>
+<div id="ty_6" class="t s2_6">converted those consumer needs into system needs. These system needs are more </div>
+<div id="tz_6" class="t s2_6">quantifiable so the group can measure exactly how well the consumer needs are </div>
+<div id="t10_6" class="t s2_6">satisfied. Please refer to the appendix for more details. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg6Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg6"><object width="935" height="1210" data="6/6.svg" type="image/svg+xml" id="pdf6" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld6" type="text/javascript">
+
+var isIE = false;
+var f6 = [['t2_6',2292],['t3_6',2624],['t4_6',2438],['t5_6',2578],['t6_6',2585],['t7_6',2623],['t8_6',2613],['t9_6',2584],['ta_6',2608],['tb_6',2634],['tc_6',2597],['td_6',2588],['te_6',2526],['tf_6',2479],['tg_6',2634],['th_6',2533],['ti_6',2512],['tj_6',745],['tk_6',2251],['tl_6',2338],['tm_6',2556],['tn_6',2531],['to_6',2463],['tp_6',2523],['tq_6',2370],['tr_6',2523],['ts_6',2637],['tt_6',2594],['tu_6',2590],['tv_6',1086],['tw_6',474],['tx_6',2382],['ty_6',2607],['tz_6',2519],['t10_6',1717]];
+function load6(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f6);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 37;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_6");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>
