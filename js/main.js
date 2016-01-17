@@ -8,7 +8,7 @@ $(document).ready( function() {
         }
     }
     
-	// Show logo 
+	// Show logo
 	$('#tab-container .tab a').click(function() {
 	  $logo.slideDown('slow');
 	});
