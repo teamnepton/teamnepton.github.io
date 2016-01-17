@@ -13,9 +13,9 @@ $(document).ready( function() {
 	  $logo.slideDown('slow');
 	});
 	// Hide logo
-	// $('#tab-about').click(function() {
-	  // $logo.slideUp('slow');
-	// });	
+	$('#tab-about').click(function() {
+	  $logo.slideUp('slow');
+	});	
 function animMeter(){
     $(".meter > span").each(function() {
                 $(this)
