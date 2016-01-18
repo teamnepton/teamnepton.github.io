@@ -1,0 +1,198 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load41();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_41{left:806px;top:1132px;}
+#t2_41{left:110px;top:112px;}
+#t3_41{left:165px;top:175px;}
+#t4_41{left:110px;top:202px;}
+#t5_41{left:110px;top:228px;}
+#t6_41{left:110px;top:254px;}
+#t7_41{left:110px;top:281px;}
+#t8_41{left:110px;top:307px;}
+#t9_41{left:288px;top:891px;}
+#ta_41{left:165px;top:970px;}
+#tb_41{left:110px;top:997px;}
+#tc_41{left:110px;top:1023px;}
+#td_41{left:110px;top:1049px;}
+#te_41{left:110px;top:1076px;}
+
+.s1_41{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_41{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans41;
+	color: rgb(0,0,0);
+}
+
+.s2_41{
+	FONT-SIZE: 97px;
+	FONT-FAMILY: ABCDEE-OpenSans41;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts41" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans41;
+	src :url("41/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_41" class="t s1_41">38 </div>
+<div id="t2_41" class="t s2_41">Resources and Timeline </div>
+<div id="t3_41" class="t s3_41">As shown in the Gantt chart below, the project was divided into two sections: the </div>
+<div id="t4_41" class="t s3_41">midterm and the final sections. The midterm section ran from January all the way through </div>
+<div id="t5_41" class="t s3_41">March, while the final section runs from April to June. The first section consisted mostly of </div>
+<div id="t6_41" class="t s3_41">planning and brainstorming, while the final section consisted of acquiring material and </div>
+<div id="t7_41" class="t s3_41">physical prototyping. All the major milestones such as reports, prototyping, integration and </div>
+<div id="t8_41" class="t s3_41">testing are clearly marked on the chart. The full schedule can be seen below.  </div>
+<div id="t9_41" class="t s3_41">Figure 24: Gantt Chart of Full Project Schedule </div>
+<div id="ta_41" class="t s3_41">The team will try to use as many commercial over-the-counter to reduce extra costs </div>
+<div id="tb_41" class="t s3_41">and time spent manufacturing. Certain components will also be developed in-house, like </div>
+<div id="tc_41" class="t s3_41">the mobile application. Even using as many COTS as possible, many of the components will </div>
+<div id="td_41" class="t s3_41">still have to be custom manufactured. A list of the necessary supply chain will consist of the </div>
+<div id="te_41" class="t s3_41">materials shown in the chart below. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg41Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg41"><object width="935" height="1210" data="41/41.svg" type="image/svg+xml" id="pdf41" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld41" type="text/javascript">
+
+var isIE = false;
+var f41 = [['t2_41',1083],['t3_41',2519],['t4_41',2806],['t5_41',2800],['t6_41',2707],['t7_41',2845],['t8_41',2408],['t9_41',1436],['ta_41',2612],['tb_41',2763],['tc_41',2840],['td_41',2849],['te_41',1116]];
+function load41(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f41);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 15;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_41");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

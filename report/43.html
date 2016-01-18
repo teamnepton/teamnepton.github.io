@@ -1,0 +1,247 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load43();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_43{left:806px;top:1132px;}
+#t2_43{left:165px;top:111px;}
+#t3_43{left:165px;top:137px;}
+#t4_43{left:165px;top:164px;}
+#t5_43{left:165px;top:190px;}
+#t6_43{left:165px;top:216px;}
+#t7_43{left:165px;top:243px;}
+#t8_43{left:165px;top:269px;}
+#t9_43{left:138px;top:311px;}
+#ta_43{left:165px;top:311px;}
+#tb_43{left:220px;top:368px;}
+#tc_43{left:165px;top:394px;}
+#td_43{left:165px;top:421px;}
+#te_43{left:165px;top:447px;}
+#tf_43{left:165px;top:473px;}
+#tg_43{left:165px;top:499px;}
+#th_43{left:165px;top:526px;}
+#ti_43{left:165px;top:552px;}
+#tj_43{left:165px;top:578px;}
+#tk_43{left:165px;top:605px;}
+#tl_43{left:165px;top:631px;}
+#tm_43{left:165px;top:658px;}
+#tn_43{left:165px;top:684px;}
+#to_43{left:165px;top:710px;}
+#tp_43{left:165px;top:736px;}
+#tq_43{left:220px;top:789px;}
+#tr_43{left:165px;top:815px;}
+#ts_43{left:165px;top:842px;}
+#tt_43{left:165px;top:868px;}
+#tu_43{left:165px;top:894px;}
+#tv_43{left:165px;top:921px;}
+#tw_43{left:165px;top:947px;}
+#tx_43{left:165px;top:973px;}
+#ty_43{left:165px;top:1000px;}
+#tz_43{left:165px;top:1026px;}
+#t10_43{left:165px;top:1052px;}
+
+.s1_43{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s3_43{
+	FONT-SIZE: 79px;
+	FONT-FAMILY: ABCDEE-OpenSans-Bold43;
+	color: rgb(0,0,0);
+}
+
+.s2_43{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans43;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts43" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans-Bold43;
+	src :url("43/fonts/ABCDEE-OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans43;
+	src :url("43/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_43" class="t s1_43">40 </div>
+<div id="t2_43" class="t s2_43">customer to customize those temperature points to fit his or her sense of heat. </div>
+<div id="t3_43" class="t s2_43">Lastly, Other thermoses may be able to signal to the customer what temperature </div>
+<div id="t4_43" class="t s2_43">the liquid inside is through an exact reading, most users do not know intuitively that </div>
+<div id="t5_43" class="t s2_43">54.4 C is the ideal hot beverage drinking temperature. The Nepton will instead </div>
+<div id="t6_43" class="t s2_43">inform the user that a drink is ready through an easy to comprehend pattern. Our </div>
+<div id="t7_43" class="t s2_43">marketing will be mainly concentrated on the internet through means such as </div>
+<div id="t8_43" class="t s2_43">Google Ads as a cheap but efficient way of spreading the word for our product.  </div>
+<div id="t9_43" class="t s3_43">B.</div>
+<div id="ta_43" class="t s3_43">Operations Plan </div>
+<div id="tb_43" class="t s2_43">Different manufacturing methods can potentially yield different results. The </div>
+<div id="tc_43" class="t s2_43">different components that need to be custom manufactured include the heating </div>
+<div id="td_43" class="t s2_43">coil, e-ink notifier, lithium ion battery, the heat sink, and the chassis. Given that all </div>
+<div id="te_43" class="t s2_43">these pieces are relatively complex pieces, it is easier to break down the </div>
+<div id="tf_43" class="t s2_43">components into more specific parts. The heat sink is a single solid piece of </div>
+<div id="tg_43" class="t s2_43">material, which can be injection molded quite easily. However, the chassis requires </div>
+<div id="th_43" class="t s2_43">a vacuum, and the aluminum must be stamped out of sheet aluminum and formed </div>
+<div id="ti_43" class="t s2_43">before vacuuming and sealing by welding. The heating coil’s heating element can be </div>
+<div id="tj_43" class="t s2_43">injection molded, and the wiring inside it can be metal extruded and assembled </div>
+<div id="tk_43" class="t s2_43">after the pieces are completed. The lithium ion battery’s different components, such </div>
+<div id="tl_43" class="t s2_43">as the electrodes, cells, and modules must be sized appropriately before being </div>
+<div id="tm_43" class="t s2_43">coated, compressed, and dried. The e-ink’s electrodes must be shaped through </div>
+<div id="tn_43" class="t s2_43">injection molding and formed into concentric cylinders, and the pigments must be </div>
+<div id="to_43" class="t s2_43">injected and sealed between the two. The pigments must also be polarized before </div>
+<div id="tp_43" class="t s2_43">injection. </div>
+<div id="tq_43" class="t s2_43">Distribution will occur through both online retailers such as Amazon as well </div>
+<div id="tr_43" class="t s2_43">as brick and mortar consignment channels. The former allows a large amount of </div>
+<div id="ts_43" class="t s2_43">users while the latter will facilitate customers physical interaction with the product </div>
+<div id="tt_43" class="t s2_43">to inspect and demo. Initially distributing the Nepton through consignment </div>
+<div id="tu_43" class="t s2_43">channels such as Modell’s to place the product into brick-and-mortar stores will </div>
+<div id="tv_43" class="t s2_43">allow for more physical viewing and generate more publicity. Beginning with </div>
+<div id="tw_43" class="t s2_43">consignment stores is to offset the fact that we are a startup. Consignment channels </div>
+<div id="tx_43" class="t s2_43">will be approached first as it allows a mutually beneficial relationship between the </div>
+<div id="ty_43" class="t s2_43">retailer and the supplier. It is a mutual relationship that allows us to place our </div>
+<div id="tz_43" class="t s2_43">product into a physical store while also allowing the vendor to assume less risk as </div>
+<div id="t10_43" class="t s2_43">they do not have to pay for the product until it sells. The supplier will be able to </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg43Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg43"><object width="935" height="1210" data="43/43.svg" type="image/svg+xml" id="pdf43" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld43" type="text/javascript">
+
+var isIE = false;
+var f43 = [['t2_43',2470],['t3_43',2532],['t4_43',2624],['t5_43',2439],['t6_43',2562],['t7_43',2432],['t8_43',2483],['ta_43',639],['tb_43',2364],['tc_43',2508],['td_43',2549],['te_43',2245],['tf_43',2349],['tg_43',2587],['th_43',2600],['ti_43',2619],['tj_43',2487],['tk_43',2626],['tl_43',2455],['tm_43',2468],['tn_43',2565],['to_43',2561],['tq_43',2355],['tr_43',2510],['ts_43',2573],['tt_43',2345],['tu_43',2481],['tv_43',2381],['tw_43',2636],['tx_43',2559],['ty_43',2425],['tz_43',2549],['t10_43',2474]];
+function load43(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f43);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 37;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_43");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load17();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_17{left:806px;top:1132px;}
+#t2_17{left:193px;top:111px;}
+#t3_17{left:275px;top:111px;}
+#t4_17{left:220px;top:137px;}
+#t5_17{left:193px;top:164px;}
+#t6_17{left:275px;top:164px;}
+#t7_17{left:193px;top:190px;}
+#t8_17{left:275px;top:190px;}
+#t9_17{left:220px;top:216px;}
+#ta_17{left:138px;top:243px;}
+#tb_17{left:165px;top:243px;}
+#tc_17{left:165px;top:269px;}
+#td_17{left:220px;top:269px;}
+#te_17{left:193px;top:295px;}
+#tf_17{left:275px;top:295px;}
+#tg_17{left:193px;top:321px;}
+#th_17{left:275px;top:321px;}
+#ti_17{left:220px;top:348px;}
+#tj_17{left:193px;top:374px;}
+#tk_17{left:275px;top:374px;}
+#tl_17{left:220px;top:400px;}
+#tm_17{left:193px;top:427px;}
+#tn_17{left:275px;top:427px;}
+#to_17{left:193px;top:453px;}
+#tp_17{left:275px;top:453px;}
+#tq_17{left:193px;top:479px;}
+#tr_17{left:275px;top:479px;}
+#ts_17{left:220px;top:506px;}
+#tt_17{left:165px;top:532px;}
+#tu_17{left:220px;top:532px;}
+#tv_17{left:193px;top:558px;}
+#tw_17{left:275px;top:558px;}
+#tx_17{left:220px;top:585px;}
+#ty_17{left:193px;top:611px;}
+#tz_17{left:275px;top:611px;}
+#t10_17{left:220px;top:637px;}
+#t11_17{left:193px;top:664px;}
+#t12_17{left:275px;top:664px;}
+#t13_17{left:193px;top:690px;}
+#t14_17{left:275px;top:690px;}
+#t15_17{left:220px;top:716px;}
+#t16_17{left:193px;top:743px;}
+#t17_17{left:275px;top:743px;}
+#t18_17{left:193px;top:769px;}
+#t19_17{left:275px;top:769px;}
+#t1a_17{left:193px;top:795px;}
+#t1b_17{left:275px;top:795px;}
+
+.s1_17{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_17{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans17;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts17" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans17;
+	src :url("17/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_17" class="t s1_17">14 </div>
+<div id="t2_17" class="t s2_17">2.1.4.5</div>
+<div id="t3_17" class="t s2_17">The Nepton system shall notify the user of the current temperature of </div>
+<div id="t4_17" class="t s2_17">the beverage inside it in relation to the calibrated perfect temperature. </div>
+<div id="t5_17" class="t s2_17">2.1.4.6</div>
+<div id="t6_17" class="t s2_17">The Nepton system shall connect wirelessly to the user’s smartphone.  </div>
+<div id="t7_17" class="t s2_17">2.1.4.7</div>
+<div id="t8_17" class="t s2_17">The Nepton system shall measure the current temperature of the </div>
+<div id="t9_17" class="t s2_17">beverage inside it. </div>
+<div id="ta_17" class="t s2_17">2.2</div>
+<div id="tb_17" class="t s2_17">Non-Functional Requirements </div>
+<div id="tc_17" class="t s2_17">2.2.1</div>
+<div id="td_17" class="t s2_17">Physical Requirements </div>
+<div id="te_17" class="t s2_17">2.2.1.1</div>
+<div id="tf_17" class="t s2_17">The Nepton system shall maintain a weight less than 2 pounds. </div>
+<div id="tg_17" class="t s2_17">2.2.1.2</div>
+<div id="th_17" class="t s2_17">The Nepton system shall maintain a height of less than 15 inches but </div>
+<div id="ti_17" class="t s2_17">greater than 10 inches. </div>
+<div id="tj_17" class="t s2_17">2.2.1.3</div>
+<div id="tk_17" class="t s2_17">The Nepton system shall have a widest diameter of between 3 and 4 </div>
+<div id="tl_17" class="t s2_17">inches. </div>
+<div id="tm_17" class="t s2_17">2.2.1.4</div>
+<div id="tn_17" class="t s2_17">The Nepton system shall utilize a push-button lid deploying system.  </div>
+<div id="to_17" class="t s2_17">2.2.1.5</div>
+<div id="tp_17" class="t s2_17">The Nepton system shall utilize a hinge for the lid. </div>
+<div id="tq_17" class="t s2_17">2.2.1.6</div>
+<div id="tr_17" class="t s2_17">The Nepton system shall provide a means to carry the container </div>
+<div id="ts_17" class="t s2_17">conveniently. </div>
+<div id="tt_17" class="t s2_17">2.2.2</div>
+<div id="tu_17" class="t s2_17">Technology Requirements </div>
+<div id="tv_17" class="t s2_17">2.2.2.1</div>
+<div id="tw_17" class="t s2_17">The Nepton system shall utilize thermocouple temperature sensing </div>
+<div id="tx_17" class="t s2_17">capabilities. </div>
+<div id="ty_17" class="t s2_17">2.2.2.2</div>
+<div id="tz_17" class="t s2_17">The Nepton system shall incorporate O-rings leak prevention </div>
+<div id="t10_17" class="t s2_17">technology. </div>
+<div id="t11_17" class="t s2_17">2.2.2.3</div>
+<div id="t12_17" class="t s2_17">The Nepton system shall incorporate Bluetooth technology. </div>
+<div id="t13_17" class="t s2_17">2.2.2.4</div>
+<div id="t14_17" class="t s2_17">The Nepton system shall incorporate a round-the-thermos e-ink </div>
+<div id="t15_17" class="t s2_17">display. </div>
+<div id="t16_17" class="t s2_17">2.2.2.5</div>
+<div id="t17_17" class="t s2_17">The Nepton system shall utilize heating coil heating capabilities. </div>
+<div id="t18_17" class="t s2_17">2.2.2.6</div>
+<div id="t19_17" class="t s2_17">The Nepton system shall utilize battery power when not plugged in.  </div>
+<div id="t1a_17" class="t s2_17">2.2.2.7</div>
+<div id="t1b_17" class="t s2_17">The Nepton system utilize the user’s existing smartphone IOS. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg17Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg17"><object width="935" height="1210" data="17/17.svg" type="image/svg+xml" id="pdf17" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld17" type="text/javascript">
+
+var isIE = false;
+var f17 = [['t3_17',2188],['t4_17',2212],['t6_17',2198],['t8_17',2047],['t9_17',569],['tb_17',939],['td_17',710],['tf_17',1973],['th_17',2149],['ti_17',720],['tk_17',2136],['tn_17',2126],['tp_17',1558],['tr_17',2003],['tu_17',817],['tw_17',2105],['tz_17',1904],['t12_17',1862],['t14_17',2001],['t17_17',1988],['t19_17',2126],['t1b_17',1935]];
+function load17(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f17);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 48;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_17");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

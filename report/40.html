@@ -1,0 +1,241 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load40();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_40{left:806px;top:1132px;}
+#t2_40{left:220px;top:111px;}
+#t3_40{left:220px;top:137px;}
+#t4_40{left:193px;top:203px;}
+#t5_40{left:220px;top:203px;}
+#t6_40{left:220px;top:257px;}
+#t7_40{left:275px;top:283px;}
+#t8_40{left:220px;top:336px;}
+#t9_40{left:275px;top:363px;}
+#ta_40{left:220px;top:389px;}
+#tb_40{left:220px;top:415px;}
+#tc_40{left:220px;top:441px;}
+#td_40{left:220px;top:468px;}
+#te_40{left:220px;top:494px;}
+#tf_40{left:220px;top:520px;}
+#tg_40{left:220px;top:547px;}
+#th_40{left:220px;top:573px;}
+#ti_40{left:220px;top:599px;}
+#tj_40{left:275px;top:652px;}
+#tk_40{left:220px;top:678px;}
+#tl_40{left:220px;top:705px;}
+#tm_40{left:220px;top:731px;}
+#tn_40{left:220px;top:757px;}
+#to_40{left:220px;top:784px;}
+#tp_40{left:275px;top:836px;}
+#tq_40{left:220px;top:863px;}
+#tr_40{left:220px;top:889px;}
+#ts_40{left:220px;top:915px;}
+#tt_40{left:220px;top:942px;}
+#tu_40{left:220px;top:968px;}
+#tv_40{left:220px;top:994px;}
+#tw_40{left:220px;top:1021px;}
+#tx_40{left:220px;top:1047px;}
+
+.s1_40{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s2_40{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans40;
+	color: rgb(0,0,0);
+}
+
+.s3_40{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: ABCDEE-OpenSans-Bold40;
+	color: rgb(102,102,102);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts40" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans-Bold40;
+	src :url("40/fonts/ABCDEE-OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans40;
+	src :url("40/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_40" class="t s1_40">37 </div>
+<div id="t2_40" class="t s2_40">is a heating rod that stems from the cover and sticks into the inner cup of the </div>
+<div id="t3_40" class="t s2_40">Nepton. </div>
+<div id="t4_40" class="t s3_40">5.</div>
+<div id="t5_40" class="t s3_40">TEMPERATURE SENSOR </div>
+<div id="t6_40" class="t s2_40">Consumer Need: </div>
+<div id="t7_40" class="t s2_40">Measure the temperature for other applications. </div>
+<div id="t8_40" class="t s2_40">Summary: </div>
+<div id="t9_40" class="t s2_40">Temperature is the name of the game when it comes to thermoses </div>
+<div id="ta_40" class="t s2_40">and other heat retention beverage dispensers. Many thermoses are able to </div>
+<div id="tb_40" class="t s2_40">keep their beverage hot for a very long time. Through the vacuum insulation, </div>
+<div id="tc_40" class="t s2_40">it has been able to naturally maintain the original temperature of the </div>
+<div id="td_40" class="t s2_40">beverages poured into it. However, for most thermoses, once the beverage is </div>
+<div id="te_40" class="t s2_40">poured into the thermos, it is almost impossible to tell if the beverage is </div>
+<div id="tf_40" class="t s2_40">drinkable or not. Often, the natural heat retaining ability of the thermos is a </div>
+<div id="tg_40" class="t s2_40">drawback because it stays hot for too long, rendering the beverages inside </div>
+<div id="th_40" class="t s2_40">inconsumable. Here we see a perfect example of the temperature creating a </div>
+<div id="ti_40" class="t s2_40">problem for the end user. </div>
+<div id="tj_40" class="t s2_40">Another problem is that once the heat has been lost and the beverage </div>
+<div id="tk_40" class="t s2_40">has cooled to lukewarm bilge water, current thermoses have no way of </div>
+<div id="tl_40" class="t s2_40">making the beverages palatable again. The waste from beverages that have </div>
+<div id="tm_40" class="t s2_40">become subpar is avoidable if the beverage was able to be reheated. once </div>
+<div id="tn_40" class="t s2_40">again, there is an issue with the temperature, and without proper knowledge </div>
+<div id="to_40" class="t s2_40">of what creates the problem, these issues can not be solved. </div>
+<div id="tp_40" class="t s2_40">The Nepton addresses both these issues in earnest through it’s added </div>
+<div id="tq_40" class="t s2_40">temperature sensing functionality. By utilizing time tested thermocouple </div>
+<div id="tr_40" class="t s2_40">technology, the Nepton is able to sense the current temperature of the </div>
+<div id="ts_40" class="t s2_40">beverage inside and relay that information for the customer to use. All </div>
+<div id="tt_40" class="t s2_40">temperature sensing is relative to the customer’s unique and specific desires, </div>
+<div id="tu_40" class="t s2_40">so the temperature need of the end user are completely customizable. Using </div>
+<div id="tv_40" class="t s2_40">the temperature sensing ability, the Nepton is even able to sense when it is </div>
+<div id="tw_40" class="t s2_40">empty, a feature used reliably as a safety feature in the automatic heating </div>
+<div id="tx_40" class="t s2_40">mechanism shutdown. </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg40Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg40"><object width="935" height="1210" data="40/40.svg" type="image/svg+xml" id="pdf40" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld40" type="text/javascript">
+
+var isIE = false;
+var f40 = [['t2_40',2415],['t5_40',833],['t6_40',528],['t7_40',1519],['t9_40',2091],['ta_40',2351],['tb_40',2400],['tc_40',2153],['td_40',2413],['te_40',2246],['tf_40',2362],['tg_40',2327],['th_40',2384],['ti_40',807],['tj_40',2195],['tk_40',2216],['tl_40',2356],['tm_40',2317],['tn_40',2401],['to_40',1888],['tp_40',2187],['tq_40',2265],['tr_40',2215],['ts_40',2199],['tt_40',2412],['tu_40',2400],['tv_40',2346],['tw_40',2304],['tx_40',712]];
+function load40(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f40);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 34;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_40");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>

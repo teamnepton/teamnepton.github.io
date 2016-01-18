@@ -1,0 +1,213 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 935px; height: 1210px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load36();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_36{left:806px;top:1132px;}
+#t2_36{left:368px;top:641px;}
+#t3_36{left:138px;top:683px;}
+#t4_36{left:165px;top:683px;}
+#t5_36{left:193px;top:726px;}
+#t6_36{left:220px;top:726px;}
+#t7_36{left:220px;top:781px;}
+#t8_36{left:275px;top:807px;}
+#t9_36{left:220px;top:834px;}
+#ta_36{left:220px;top:886px;}
+#tb_36{left:275px;top:913px;}
+#tc_36{left:220px;top:939px;}
+#td_36{left:220px;top:965px;}
+#te_36{left:220px;top:991px;}
+#tf_36{left:220px;top:1018px;}
+#tg_36{left:220px;top:1044px;}
+
+.s1_36{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	color: rgb(0,0,0);
+}
+
+.s4_36{
+	FONT-SIZE: 73px;
+	FONT-FAMILY: ABCDEE-OpenSans-Bold36;
+	color: rgb(102,102,102);
+}
+
+.s3_36{
+	FONT-SIZE: 79px;
+	FONT-FAMILY: ABCDEE-OpenSans-Bold36;
+	color: rgb(0,0,0);
+}
+
+.s2_36{
+	FONT-SIZE: 67px;
+	FONT-FAMILY: ABCDEE-OpenSans36;
+	color: rgb(0,0,0);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts36" type="text/css" >
+
+@font-face {
+	font-family: ABCDEE-OpenSans-Bold36;
+	src :url("36/fonts/ABCDEE-OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: ABCDEE-OpenSans36;
+	src :url("36/fonts/ABCDEE-OpenSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_36" class="t s1_36">33 </div>
+<div id="t2_36" class="t s2_36">Figure 23: Final Prototype Set up </div>
+<div id="t3_36" class="t s3_36">C.</div>
+<div id="t4_36" class="t s3_36">Prototype Technology Delivers Consumer Need </div>
+<div id="t5_36" class="t s4_36">1.</div>
+<div id="t6_36" class="t s4_36">COMPANION APP </div>
+<div id="t7_36" class="t s2_36">Consumer Need: </div>
+<div id="t8_36" class="t s2_36">Control, calibrate, and individualize Nepton’s functional and aesthetic </div>
+<div id="t9_36" class="t s2_36">settings through an intuitive and easy to use interface. </div>
+<div id="ta_36" class="t s2_36">Summary: </div>
+<div id="tb_36" class="t s2_36">Consumers today expect and demand a certain degree of quality, </div>
+<div id="tc_36" class="t s2_36">complexity, and control within their products. Quality in that they can expect </div>
+<div id="td_36" class="t s2_36">the product to work out of the box reasonably well, complexity in that the </div>
+<div id="te_36" class="t s2_36">product is versatile and has multiple functions, and control in that they can </div>
+<div id="tf_36" class="t s2_36">adjust the product to best suit their individual preferences or needs. The </div>
+<div id="tg_36" class="t s2_36">Nepton team believes that the inclusion of an app fulfills a modern digital </div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg36Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg36"><object width="935" height="1210" data="36/36.svg" type="image/svg+xml" id="pdf36" style="width:935px; height:1210px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld36" type="text/javascript">
+
+var isIE = false;
+var f36 = [['t2_36',1015],['t4_36',1865],['t6_36',634],['t7_36',528],['t8_36',2165],['t9_36',1699],['tb_36',2042],['tc_36',2390],['td_36',2300],['te_36',2340],['tf_36',2266],['tg_36',2295]];
+function load36(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f36);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 17;
+for (var i = 1; i < divCount; i++) {
+	var div = document.getElementById("t" + i.toString(36) + "_36");
+	div.style.top = (div.offsetTop * 4) + "px";
+	div.style.left = (div.offsetLeft * 4) + "px";
+	div.style.zoom = "25%";}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>
