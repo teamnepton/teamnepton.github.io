@@ -309,6 +309,24 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 .info h4, #header h4{
   color: #999;
 }
+
+/* Photo */
+.photoinfo{
+  float: left;
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.photoinfo img{
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ border-radius: 4px;
+ width: 100%;
+}
+
+
+
 /* Contact */
 .main-links{
 
