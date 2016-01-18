@@ -185,6 +185,11 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
   max-width: 50%;
 }
 
+/* CAD Viewer */
+.cad{
+  max-width: 50%;
+}
+
 /* Tabs */
 .etabs{
   margin: 0;
