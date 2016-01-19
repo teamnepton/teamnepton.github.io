@@ -802,17 +802,17 @@ Change widths as necessary
   h2, h3{page-break-after: avoid}
 }
 
-ol {
+ul {
     counter-reset: foo;
     display: table;
 }
 
-ol > li {
+ul > li {
     counter-increment: foo;
     display: table-row;
 }
 
-ol > li::before {
+ul > li::before {
     content: counter(foo) ".";
     display: table-cell; /* aha! */
     text-align: right;
