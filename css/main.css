@@ -185,20 +185,6 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
   max-width: 50%;
 }
 
-/* Facebook */
-.fb-root {
-/* 	position:relative;
-	padding-bottom:56.25%;
-	padding-top:30px;
-	height:0;
-	overflow:hidden; */
-	
-	position:absolute;
-	top:0;
-	left:0;
-	width:50%;
-	height:50%;
-}
 
 /* CAD Viewer */
 .cad {
