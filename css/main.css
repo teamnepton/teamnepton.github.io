@@ -287,8 +287,8 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 /* Photo */
 .photo{
   float: left;
-  height: 300px;
-  width: 450px;
+/*   height: 300px;
+  width: 450px; */
   margin-right: 20px;
   overflow: hidden;
 }
@@ -296,7 +296,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
  -webkit-border-radius: 4px;
  -moz-border-radius: 4px;
  border-radius: 4px;
- width: 100%;
+ width: 50%;
 }
 .info{
 
