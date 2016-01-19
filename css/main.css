@@ -771,6 +771,7 @@ Change widths as necessary
   .g1 {width:31.333%}
   .g2 {width:64.667%;}
   .g3 {width:98.0%}
+  .g4 {width:50.0%}
 }
 
 @media only screen and (min-width: 1280px) { 
