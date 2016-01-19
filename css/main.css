@@ -778,7 +778,7 @@ Change widths as necessary
 
   }
 }
-
+	
 /* WIDESCREEN */
 /* Increased body size for legibility */
 @media only screen and (min-width: 1400px) { 
@@ -802,18 +802,7 @@ Change widths as necessary
   h2, h3{page-break-after: avoid}
 }
 
-ul {
-    counter-reset: foo;
-    display: table;
-}
-
-ul > li {
-    counter-increment: foo;
-    display: table-row;
-}
-
-ul > li::before {
-    content: counter(foo) ".";
-    display: table-cell; /* aha! */
-    text-align: right;
+ul li {
+    list-style-position: outside;
+    margin-left: 1em;
 }
