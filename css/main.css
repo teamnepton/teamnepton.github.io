@@ -111,9 +111,9 @@ span.amp{font-family:Adobe Caslon Pro,Baskerville,"Goudy Old Style","Palatino","
 /* DEFAULT MOBILE STYLE */
 body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 /* column grid */
-.g1,.g2,.g3{display:block; position: relative; margin-left: 1%; margin-right: 1%}
+.g0,.g1,.g2,.g3{display:block; position: relative; margin-left: 1%; margin-right: 1%}
 /* 1 column grid */
-.g1,.g2,.g3{width:98.0%}
+.g0,.g1,.g2,.g3{width:98.0%}
 
 /* Wrapper */
 .main{
@@ -741,14 +741,12 @@ Change widths as necessary
    border-left: 1px solid #f1f1f1;
  }
  /* COLUMN GRID */
- .g1,.g2,.g3 {display:inline; float: left}
+ .g0,.g1,.g2,.g3 {display:inline; float: left}
 
  /* 2 COLUMN GRID */
  .g1 {width:48.0%}
  .g2 {width:48.0%}
  .g3 {width:98.0%}
- .g4 {width:48.0%}
- .g5 {width:48.0%}
 }
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP */
